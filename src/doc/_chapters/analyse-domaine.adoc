@@ -1,0 +1,77 @@
+= Analyse du domaine
+ 
+== Introduction
+
+=== Objectif
+
+// Décrire l'objectif de ce chapitre.
+
+Ce chapitre constitue le premier livrable d’une série de quatre chapitres destinés à fournir une analyse et une conception par objets complètes répondant au cahier des charges qui nous a été fourni. 
+Ce document présente l’ensemble de la démarche suivie ainsi que les résultats obtenus lors de la phase de l'analyse du domaine de notre système. 
+Il se décompose en plusieurs parties.
+
+Dans la première partie, nous présentons de manière détaillée l’ensemble des cas d’utilisation que nous avons dégagés lors de l’analyse. 
+Nous utiliserons pour cela le canevas proposé par Cockburn que nous compléterons par des instantanés ainsi que par des post-conditions exprimées en OCL (Object Constraint Language) et quelques scenarii. 
+Cette partie constitue une étape clé de la phase de l'analyse du domaine.
+
+Dans la deuxième partie, nous présentons le  diagramme de classes métiers (i.e. diagramme de classes au niveau analyse) que nous avons construit à partir de l’analyse réalisée. 
+Ce diagramme fournit une vue statique et synthétique du domaine de notre projet. 
+Cette  partie constitue également une étape clé de la phase de spécification des besoins.
+
+
+Dans la troisième er dernière nous fournissons le dictionnaire des données que nous avons construit suite à l'analyse du domaine. 
+Il s’agit d’un listing de l’ensemble des termes relatifs au domaine étudié ainsi que leur définition précise.
+
+
+
+Dans une quatrième et dernière partie, 
+
+=== Organisation du chapitre
+
+Ce chapitre est organisé en $n$ sections. Dans le première section, nous décrirons....
+
+
+
+== Cas d'utilisation
+
+=== Mise en place d'un jeu
+
+include::use-case-template.adoc[leveloffset=+2]
+
+
+
+== Modèle de classes du domaine
+
+[plantuml, domain-classes, png]
+----
+@startuml
+Class01 <|-- Class02
+Class03 *-- Class04
+Class05 o-- Class06
+Class07 .. Class08
+Class09 -- Class10
+@enduml
+----
+
+=== Invariants
+
+[source,ocl]
+----
+context Etudiant::age() : Integer
+post correct: result = (today - naissance).years()
+
+context Typename::operationName(param1: type1, ...): Type
+post: result = ...
+
+context Typename::operationName(param1: type1, ...): Type
+post resultOk: result = ...
+----
+
+
+== Dictionnaire de données
+	
+include::terms.adoc[]
+
+
+== Conclusion
+
