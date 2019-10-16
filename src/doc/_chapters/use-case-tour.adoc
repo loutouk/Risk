@@ -1,0 +1,107 @@
+== Use Case Tour
+
+=== Revision History +
+
+[cols=",,",options="header",]
+|===
+|Date |Author |Description of change
+| | |
+| | |
+| | |
+| | |
+| | |
+| | |
+| | |
+|===
+
+Use Case Template. Copyright (c) 2004-2005 TechnoSolutions Corporation
+
+(Learn more about “TopTeam for Use Cases” at
+http://www.technosolutions.com[[.underline]#www.technosolutions.com#])
+
+Permission is hereby granted, free of charge, to any person obtaining a
+copy of this document and its associated documentation, to use the
+document on their projects for any commercial or non-commercial purpose.
+However you may not publish, distribute, sublicense, and/or sell copies
+of this document.
+
+THE DOCUMENT IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
+CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+DOCUMENT OR THE USE OR OTHER DEALINGS IN THE DOCUMENT. TECHNOSOLUTIONS
+CORPORATION MAKES NO REPRESENTATIONS ABOUT THE SUITABILITY OF THIS
+DOCUMENT FOR ANY PURPOSE. +
+
+*Use Case:* Tour
+
+*Id*: UC- 3
+
+*Description* Le tour d'un joueur lors d'une partie de RISK
+
+*Level:* User Goal
+
+*Primary Actor* Joueur
+
+*Supporting Actors* Jeu
+
+*Stakeholders and Interests* Pioche Défausse Carte Territoire Continent Main
+
+*Pre-Conditions*
+
+C'est au joueur de jouer. La partie n'est pas terminée.
+
+*Post Conditions*
+
+[.underline]#Success end condition#
+
+Le joueur a déployé ses armées gagnées dans ce tour lors de la phase de renfort sur son territoire. Il a éventuellement attaqué d'autre joueurs et renforcé ses territoires.
+
+[.underline]#Failure end condition#:
+
+Le joueur ne réalise aucune action.
+
+[.underline]#Minimal Guarantee#
+
+Le joueur ne peut pas perdre lors de son tour.
+
+*Trigger*
+
+L'initialisation est terminée. Le joueur précédent le joueur courant a fini son tour. 
+
+=== Main Success Scenario
+
+[arabic]
+. Le joueur entre en phase de renfort.
+.. Le joueur reçoit des armées selon les territoires qu'il possède. Nombre d'armées = arrondiInférieur(nombreDeTerritoirePossédés/3). *extension 1*
+.. Le joueur peut échanger des jeux de 3 cartes de sa main contre des armées. Voir UC4 Echange de cartes.
+.. Le joueur pose ses nouvelles armées sus ses territoires occupés de la façon qu'il souhaite.
+. Le joueur entre en phase d'attaque. *extension 2*
+.. L'attaquant choisi un de ses territoires depuis lequel il attaque, possédant au moins 2 armées, et un territoire d'un autre joueur à attaquer avec lequel il possède une voie maritime directe ou une frontière partagée. 
+.. Le joueur attaquant et le joueur défenseur mettent en jeu un nombre de dés correspondant au nombre d'armées qu'ils veulent faire combattre. Ce nombre ne doit pas dépasser:
+... Le nombre d'armées présentent sur le territoire
+... 3 pour l'attaquant
+... 2 pour le défenseur
+.. On lancé les dés. Le dé le plus faible de chaque paire de dé attaquant/défenseur fait perdre une armée à son possesseur. Dans le cas d'une égalité, c'est le défenseur qui gagne. Le territoire attaquant ne peut descendre en dessous une armée. *extension 3*
+. Le joueur rentre en phase de fortification. *extension 4*
+.. Le joueur peut déplacer une fois entre 1 et n-1 armées d'un de ses territoires à un de ses autres si le chemin entre les deux est composé uniquement de ses propre territoires.
+. Le tour du joueur prend fin et laisse place au suivant.
+
+=== Extensions
+
+{empty}1. Si le joueur possède tous les territoires d'un continent, il reçoit 5 armées supplémentaires.
+
+{empty}2. Le joueur peut passer cette phase si il le veut.
+
+{empty}3. Si le défenseur perd toutes ses armées sur le territoire attaqué, l'attaquant déplace entre 1 et n-1 armées sur ce terrtoire. Avec n le nombre d'armées présentent sur le territoire attaquant. L'attaquant devient le possesseur de ce territoire. *extension 3.1*
+p
+{empty}3.1. Si c'était le dernier territoire du défenseur, celui-ci est éliminé de la partie et l'attaquant récupère les cartes de sa main. Si l'attaquant vient à posséder 5 cartes ou plus grâce à cela, il retourne à l'étape 1.b. avec obligation d'échange de carte.
+
+{empty}4. Si le joueur a capturé au moins un territoire lors de la phase d'attaque, il pioche la première carte de la pioche et la met dans sa main. *extension 4.1*
+
+{empty}4.1. Si la pioche est vide, on mélange les cartes de la défausse et on les placent dans la pioche.
+
+*Frequency:* Quelques dizaines de fois par partie pour chaque Joueur.
+
