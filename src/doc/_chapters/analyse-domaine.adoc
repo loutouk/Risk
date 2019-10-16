@@ -4,6 +4,9 @@
 
 === Objectif
 
+:imagesdir: resources/img
+
+
 // Décrire l'objectif de ce chapitre.
 
 Ce chapitre constitue le premier livrable d’une série de quatre chapitres destinés à fournir une analyse et une conception par objets complètes répondant au cahier des charges qui nous a été fourni. 
@@ -42,6 +45,8 @@ include::use-case-tour.adoc[leveloffset=+2]
 include::use-case-echange.adoc[leveloffset=+2]
 
 == Modèle de classes du domaine
+
+image::DomainClassDiagram.png[]
 
 [plantuml, domain-classes, png]
 ----
