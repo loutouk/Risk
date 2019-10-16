@@ -1,4 +1,4 @@
-== Use Case Initialisation
+== Use Case Jouer
 
 === Revision History +
 
@@ -34,19 +34,19 @@ TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
 DOCUMENT OR THE USE OR OTHER DEALINGS IN THE DOCUMENT. TECHNOSOLUTIONS
 CORPORATION MAKES NO REPRESENTATIONS ABOUT THE SUITABILITY OF THIS
 DOCUMENT FOR ANY PURPOSE. +
-*Use Case:* Initialisation
+*Use Case:* Jouer
 
-*Id*: UC- 2
+*Id*: UC- 1
 
-*Description* Initialisation et mise en place d'une partie de RISK
+*Description* Résumé d'une partie de RISK dans sa globalité.
 
-*Level:* User Goal
+*Level:* High Level Summary
 
 *Primary Actor* Jeu
 
-*Supporting Actors* Joueurs
+*Supporting Actors* Joueur
 
-*Stakeholders and Interests* Pioche Défausse Carte Territoire Continent
+*Stakeholders and Interests*
 
 *Pre-Conditions*
 
@@ -56,34 +56,29 @@ Au moins 3 joueurs sont présents.
 
 [.underline]#Success end condition#
 
-Le jeu a été correctement mis en place selon les règles de RISK. Chaque territoire est en possession d'un joueur. Chaque territoire supporte une ou plusieurs armées du joueur possédant ce territoire. La pioche est remplie avec toutes les cartes du jeu dans un ordre aléatoire.
+Le jeu s'est déroulé correctement jusqu'à l'obtention d'un joueur gagnant selon les règles du jeu RISK.
 
 [.underline]#Failure end condition#:
 
-Un des joueurs ne place pas une de ses armées lorsque c'est à son tour de le faire. Il bloque l'initialisation.
+Un des joueurs ne réalise pas d'action et bloque le jeu.
 
 [.underline]#Minimal Guarantee#
 
-La partie ne peut pas continuer tant que le jeu n'a pas été correctement initialisé.
+Pas de garantie.
 
 *Trigger*
 
-Les joueurs sont prêts à jouer.
+Un groupe de joueurs veut faire une partie.
 
 === Main Success Scenario
 
 [arabic]
-. On distribue à chaque joueur des unités d'armé selon le nombre de joueurs total. 35 unités pour 3 joueurs, 30 pour 4, 5 pour 25 et 6 pour 20.
-. L'ordre de jeu des joueurs à l'initialisation et lors des tours qui suivront est déterminé aléatoirement avec un lancé de dé 6. Chaque joueur lance le dé et le joueur ayant le plus grand chiffre commence. Les joueurs jouent ensuite dans le sens des aiguille d'une montre après le premier joueur *Extension 1*.
-. Les joueurs posent tour à tour une de leur unité d'armé sur les territoires non occupés par un autre joueur, avec obligation de placer sur un territorie innocupé si possible. *Extension 2*.
-. Répéter 3. tant qu'il reste des armées aux joueurs.
-. On mélange toutes les cartes du jeu et les met dans la pioche.
+. Les joueurs mettent en place la partie (Voir UC2: Initialisation)
+. Les joueurs jouent tour à tour (Voir UC3: Tour)
+. On répète 2. tant qu'il y a plus d'un joueur sur les territoires.
+. Le dernier joueur est le gagnant. La partie est terminée.
 
-=== Extensions
 
-{empty}1. Si il y a une égalité entre les premiers, ces joueurs rejouent jusqu'à ce qu'il y ai un gagnant.
-
-{empty}2. Si le territoire était innocupé par une armée, le joueur qui y pose l'armée se l'approprie.
 
 *Frequency:* Une seule fois
 
