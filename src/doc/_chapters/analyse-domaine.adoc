@@ -36,8 +36,8 @@ Ce chapitre est organisé en $n$ sections. Dans le première section, nous décr
 
 === Mise en place d'un jeu
 
-include::use-case-template.adoc[leveloffset=+2]
-
+include::use-case-jouer.adoc[leveloffset=+2]
+include::use-case-initialisation.adoc[leveloffset=+2]
 
 
 == Modèle de classes du domaine
