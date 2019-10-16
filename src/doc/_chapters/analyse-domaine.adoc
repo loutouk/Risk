@@ -46,18 +46,17 @@ include::use-case-echange.adoc[leveloffset=+2]
 
 == Modèle de classes du domaine
 
+=== Diagramme de classe du domaine
 image::DomainClassDiagram.png[]
 
-[plantuml, domain-classes, png]
-----
-@startuml
-Class01 <|-- Class02
-Class03 *-- Class04
-Class05 o-- Class06
-Class07 .. Class08
-Class09 -- Class10
-@enduml
-----
+=== Diagramme d'objet du domaine
+image::ObjectDomainClassDiagram.png[]
+
+=== Action attaquer - Snapshot
+image::ActionAttaquerSnapshot.png[]
+
+=== Action échanger carte - Snapshot
+image::ActionEchangerSnapshot.png[]
 
 === Invariants
 
