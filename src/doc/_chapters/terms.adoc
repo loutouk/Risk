@@ -1,40 +1,41 @@
 [.small]
 [width="100%",cols="34%,33%,33%",]
 |===
-|*Term* 
-|*Short Description* 
+|*Term*
+|*Short Description*
 |*Meaning*
 
-| [[port, Port]] Port 
-| a 
-| ax
+| Territoire
+| Zone possédée par un joueur.
+| Plus petite unité de terrain du jeu. Le joueur possédant des troupes sur cette zone possède donc le territoire. Chaque
+territoire est accessible par un autre, grâce à un ou plusieurs chemins (terrestres ou maritimes).
 
-| [[publication,Publication]] Publication  
-| Activity
-| Registers a Service with a DNS Responder.
+| Continent
+| Ensemble de Territoire.
+| Unité de terrain du jeu. Un continent n'est rien d'autre qu'un ensemble de territoire. Si un joueur possède chaque territoires du
+continent, alors il possède le continent.
 
-| Registration
-|
-| See <<publication>>
+| Carte
+| Cartes : Fantassin, chevalier, char. Les trois différentes cartes du jeu.
+| Permettent de faire certains échanges qui octroi plus ou moins d'unités au joueur qui les a marchandé.
 
-| Package
-|
-| Minimum size = 9,000 bytes
+| Main
+| Ensemble des cartes que possède le joueur.
+| Chaque tours le joueur pioche des cartes et les stockes dans sa main.
 
-| ((One-Shot Multicast DNS Queries))
-| bla
-| bla
+| Pioche
+| Ensemble des cartes piochable par les joueurs.
+| C'est ici que toutes les cartes du jeu qui n'ont pas encore été piochées ou jouées se trouvent. Au départ, du jeu il se trouve x carte
+dans la pioche.
 
-| ((Continuous Multicast DNS Querying))
-| bla
-| bla
+| Défausse
+| Ensemble des cartes jouées par les joueurs.
+| C'est ici que toutes les cartes du jeu qui ont été précédemment jouées par les joueurs ce trouvent. Une fois la pioche vide, c'est les
+cartes présentent dans cette défausse qui sont mélangées puis utilisées pour faire la nouvelle pioche.
 
-| [[service-instance-name, Service Instance Name]] Service Instance Name
-| a
-| a
-
-| [[service-type, Service Type]] Service Type 
-| bla
-| bla
+| Dés
+| Des dés de 6.
+| Ils permettent de jouer les affrontement entre les joueurs quand un territoire en attaque un autre. C'est là que la partie random
+du jeu du Risk intervient.
 
 |===

@@ -1,0 +1,13 @@
+=== Invariants
+
+[source,ocl]
+----
+context Etudiant::age() : Integer
+post correct: result = (today - naissance).years()
+
+context Typename::operationName(param1: type1, ...): Type
+post: result = ...
+
+context Typename::operationName(param1: type1, ...): Type
+post resultOk: result = ...
+----
