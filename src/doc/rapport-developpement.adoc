@@ -5,16 +5,24 @@
 
 [options="header"]
 |===
-| Nom       | Adresse 
-| Auteur_1 | auteur_1@etu.univ-nantes.fr
-| Auteur_2 | auteur_2@etu.univ-nantes.fr
-| Auteur_3 | auteur_3@etu.univ-nantes.fr
-| Auteur_4 | auteur_4@etu.univ-nantes.fr
+| Nom       | Adresse
+| Boursier Louis | louis.boursier@etu.univ-nantes.fr
+| Filaudeau Éloi | filaudeau.eloi@etu.univ-nantes.fr
+| Lasherme Loïc | loic.lasherme@etu.univ-nantes.fr
 |===
 
 == Introduction
 
-Description du projet
+Au cours de ce projet nous avons pour but de développer un logiciel réparti permettant de jouer au jeu du Risk. Pour se faire nous devons
+mettre en oeuvre les connaissances vues en cours pour nous permettre de réaliser au mieux ce projet.
+
+Le jeu du Risk est à la base un jeu de plateau qui se joue de 2 à 6 joueurs. À tour de rôle, chaque joueur va définir un territoire sur lequel
+il placera une unité jusqu'à remplir chaque zone. Une fois cela fait, les joueurs pourront compléter les forces de leur armée sur les zones
+occupées par celle-ci afin de se libérer des unités en main. Une fois cela fait, le jeu peut enfin commencer et le joueur qui possédera tous
+les territoires se verra remporter la victoire.
+
+Nous avons donc pour objectif de penser, modéliser, et implémenter ce jeu décrit brièvement ci-dessus.
+
 
 == Organisation du document
 
