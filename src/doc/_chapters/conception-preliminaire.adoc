@@ -1,3 +1,5 @@
+:imagesdir: resources/img
+
 = Spécification des composants
 
 
