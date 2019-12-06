@@ -12,6 +12,8 @@ Cette section décrit le contenu du reste du chapitre  et explique comment le do
 
 == Description des composants 
 
+image::components.png[]
+
 Établir les frontières du système.
 
 Division du système en composants.
