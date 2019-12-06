@@ -6,7 +6,7 @@
 Ce livrable correspond à la "conception préliminaire" du projet. Il comprend la division de la solution en différents composants, l'explication des fonctionnalités attendues de chaque composant, la spécification des interfaces fournies par chaque composant, ainsi que des diagramme de séquence qui valident ces interfaces.
 
 == Objectif
-Préciser les objectifs de ce chapitre. 
+Etablir les frontières du système et le dibiser en composants. Définir les composants et interfaces, leur portée et leurs responsabilitées. Spécifier les opérations fournies par les compsoants.
 
 == Organisation du chapitre
 
