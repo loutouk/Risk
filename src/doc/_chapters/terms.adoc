@@ -5,6 +5,10 @@
 |*Short Description*
 |*Meaning*
 
+| Unité
+| Représente un pion d'armée.
+| Les unités permettent d'attaquer et de défendre les territoires d'un joueur. On considère qu'il y a autant d'unités disponbile qu'on en a besoin.
+
 | Territoire
 | Zone possédée par un joueur.
 | Plus petite unité de terrain du jeu. Le joueur possédant des troupes sur cette zone possède donc le territoire. Chaque
@@ -16,17 +20,16 @@ territoire est accessible par un autre, grâce à un ou plusieurs chemins (terre
 continent, alors il possède le continent.
 
 | Carte
-| Cartes : Fantassin, chevalier, char. Les trois différentes cartes du jeu.
-| Permettent de faire certains échanges qui octroi plus ou moins d'unités au joueur qui les a marchandé.
+| Cartes : Fantassin, Cavalier, Char, Wild. Les quattres différentes cartes du jeu.
+| Permettent de faire certains échanges qui octroient un certain nombre d'unités au joueur qui les a marchandées.
 
 | Main
 | Ensemble des cartes que possède le joueur.
-| Chaque tours le joueur pioche des cartes et les stockes dans sa main.
+| Chaque tour le joueur pioche des cartes et les range dans sa main.
 
 | Pioche
 | Ensemble des cartes piochable par les joueurs.
-| C'est ici que toutes les cartes du jeu qui n'ont pas encore été piochées ou jouées se trouvent. Au départ, du jeu il se trouve x carte
-dans la pioche.
+| C'est ici que toutes les cartes du jeu qui n'ont pas encore été piochées ou jouées se trouvent. Ces cartes servent à faire des échanges pour gagner des unités. Il y a 44 cartes unités et 2 cartes Joker.
 
 | Défausse
 | Ensemble des cartes jouées par les joueurs.
@@ -37,5 +40,9 @@ cartes présentent dans cette défausse qui sont mélangées puis utilisées pou
 | Des dés de 6.
 | Ils permettent de jouer les affrontement entre les joueurs quand un territoire en attaque un autre. C'est là que la partie random
 du jeu du Risk intervient.
+
+| Plateau
+| Plateau du jeu RISK.
+| Le plateau contient tous les éléments du jeu tels que la pioche, les joueurs, armées...
 
 |===
