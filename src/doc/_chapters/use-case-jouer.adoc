@@ -1,44 +1,12 @@
 == Use Case Jouer
 
-=== Revision History +
-
-[cols=",,",options="header",]
-|===
-|Date |Author |Description of change
-| | |
-| | |
-| | |
-| | |
-| | |
-| | |
-| | |
-|===
-
 Use Case Template. Copyright (c) 2004-2005 TechnoSolutions Corporation
 
-(Learn more about “TopTeam for Use Cases” at
-http://www.technosolutions.com[[.underline]#www.technosolutions.com#])
-
-Permission is hereby granted, free of charge, to any person obtaining a
-copy of this document and its associated documentation, to use the
-document on their projects for any commercial or non-commercial purpose.
-However you may not publish, distribute, sublicense, and/or sell copies
-of this document.
-
-THE DOCUMENT IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
-OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
-MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
-IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
-CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
-TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
-DOCUMENT OR THE USE OR OTHER DEALINGS IN THE DOCUMENT. TECHNOSOLUTIONS
-CORPORATION MAKES NO REPRESENTATIONS ABOUT THE SUITABILITY OF THIS
-DOCUMENT FOR ANY PURPOSE. +
 *Use Case:* Jouer
 
 *Id*: UC- 1
 
-*Description* Résumé d'une partie de RISK dans sa globalité.
+*Description* Jouer une partie de RISK.
 
 *Level:* High Level Summary
 
@@ -56,15 +24,17 @@ Au moins 3 joueurs sont présents.
 
 [.underline]#Success end condition#
 
-Le jeu s'est déroulé correctement jusqu'à l'obtention d'un joueur gagnant selon les règles du jeu RISK.
+Le jeu s'est déroulé suivant les règles jusqu'à l'obtention d'un joueur gagnant.
 
 [.underline]#Failure end condition#:
 
+Le serveur tombe en panne.
+Le réseau tombe en panne.
 Un des joueurs ne réalise pas d'action et bloque le jeu.
 
 [.underline]#Minimal Guarantee#
 
-Pas de garantie.
+Les joueurs sont informés par message si une erreur survient.
 
 *Trigger*
 
