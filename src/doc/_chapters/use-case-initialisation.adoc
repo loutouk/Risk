@@ -41,7 +41,7 @@ Les joueurs sont prêts à jouer.
 === Main Success Scenario
 
 [arabic]
-. On distribue à chaque joueur des unités d'armé selon le nombre de joueurs total. 35 unités pour 3 joueurs, 30 pour 4, 5 pour 25 et 6 pour 20.
+. On distribue à chaque joueur des unités d'armé selon le nombre de joueurs total. 35 unités pour 3 joueurs, 30 pour 4, 25 pour 5 et 20 pour 6.
 . L'ordre de jeu des joueurs à l'initialisation et lors des tours qui suivront est déterminé aléatoirement avec un lancé de dé 6. Chaque joueur lance le dé et le joueur ayant le plus grand chiffre commence. Les joueurs jouent ensuite dans le sens des aiguille d'une montre après le premier joueur *Extension 1*.
 . Les joueurs posent tour à tour une de leur unité d'armé sur les territoires non occupés par un autre joueur, avec obligation de placer sur un territorie innocupé si possible. *Extension 2*.
 . Répéter 3. tant qu'il reste des armées aux joueurs.
