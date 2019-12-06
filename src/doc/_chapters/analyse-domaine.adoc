@@ -57,6 +57,3 @@ include::invariants.adoc[leveloffset=+2]
 == Dictionnaire de données
 
 include::terms.adoc[]
-
-
-== Conclusion
