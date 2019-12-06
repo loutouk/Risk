@@ -6,7 +6,7 @@
 Ce livrable correspond à la "conception préliminaire" du projet. Il comprend la division de la solution en différents composants, l'explication des fonctionnalités attendues de chaque composant, la spécification des interfaces fournies par chaque composant, ainsi que des diagramme de séquence qui valident ces interfaces.
 
 == Objectif
-Etablir les frontières du système et le dibiser en composants. Définir les composants et interfaces, leur portée et leurs responsabilitées. Spécifier les opérations fournies par les compsoants.
+Etablir les frontières du système et le diviser en composants. Définir les composants et interfaces, leur portée et leurs responsabilitées. Spécifier les opérations fournies par les compsoants.
 
 == Organisation du chapitre
 
@@ -16,15 +16,9 @@ Cette section décrit le contenu du reste du chapitre  et explique comment le do
 
 image::components.png[]
 
-Établir les frontières du système.
-
-Division du système en composants.
-
-Décrire le comportement souhaité des composants.
-
 == Le composant `Game Server`
 
-Décrire succinctement le comportement du composant.
+Le serveur est responsable de la communication entre client (ordonnancement des tours et distribution des messages). Il vérifie également les opérations de chaque client (est-ce que l'opération est valide ? est-ce que elle respecte les règles de RISK et les cas d'utilisation?). Il assure les parties critiques telles que le lancé de dés (éviter la triche côté client). Il a aussi le rôle de maître de jeu dans le sens où il est chargé de mettre à jour le plateau selon les actions des clients. 
 
 === Spécification des interfaces
 
