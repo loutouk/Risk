@@ -1,5 +1,8 @@
 = Conception détaillée
 
+== Objectif
+Spécifier la structure interne et le comportement des composants en assurant une certaine qualité (évolution, performance, portabilité, testabilité, etc). 
+
 == Le composant WebServer
 
 == Le composant WebClient
