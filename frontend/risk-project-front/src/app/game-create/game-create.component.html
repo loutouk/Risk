@@ -1,0 +1,15 @@
+<div id="game-create-frame">
+  Game Creation
+  <br>
+  <label>Player name:
+    <input [(ngModel)]="player.name" placeholder="Nickname">
+  </label>
+  <br>
+  <label>Player key:
+    <input [(ngModel)]="player.key" placeholder="Key">
+  </label>
+  <br>
+  <button id="game-create-create-button" (click)="onClickCreate()">
+    Create
+  </button>
+</div>
