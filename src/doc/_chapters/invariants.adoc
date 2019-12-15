@@ -6,22 +6,22 @@ context Jeu inv:
     self.joueur->size() >= 3 and self.joueur->size() <= 6
 
 context Continent inv:
-    self.name = "Afrique" implies self.territoire->size() = 6
-    self.name = "Asie" implies self.territoire->size() = 12
-    self.name = "Océanie" implies self.territoire->size() = 4
-    self.name = "Europe" implies self.territoire->size() = 7
-    self.name = "Amérique du Nord" implies self.territoire->size() = 9
+    self.name = "Afrique" implies self.territoire->size() = 6 and
+    self.name = "Asie" implies self.territoire->size() = 12 and
+    self.name = "Océanie" implies self.territoire->size() = 4 and
+    self.name = "Europe" implies self.territoire->size() = 7 and
+    self.name = "Amérique du Nord" implies self.territoire->size() = 9 and
     self.name = "Amérique du Sud" implies self.territoire->size() = 4
 
 context Pioche inv:
     self.joueur->size() >= 3 and self.joueur->size() <= 6
 
 -- Il n'y a que 42 cartes qui sont soit dans la pioche soit dans la défausse
-context Pioche.carte->size() : Integer
-    derive: 42 - Defausse.carte->size()
+context Pioche::carte->size() : Integer
+    derive: 42 - Defausse::carte->size()
     
-context Defausse.carte->size() : Integer
-    derive: 42 - Pioche.carte->size()
+context Defausse::carte->size() : Integer
+    derive: 42 - Pioche::carte->size()
 
 -- Ce sont des dés de 6
 context De::lancer(): Integer
@@ -35,8 +35,8 @@ context Joueur::territoire::armées->size() : Integer
 context Jeu::attaquer(attaquant: Territoire, defenseur: Territoire)
     pre: attaquant.voisins->includes(defenseur) and attaquant->armées->size() >= 2 and
          attaquant.propriétaire <> defenseur.propriétaire 
-    post:  attaquant->armées@pre->size() <> attaquant->armées->size() or 
-           defenseur->armées@pre->size() <> defenseur->armées->size() and
+    post:  ( (attaquant->armées@pre->size() <> attaquant->armées@post->size()) or 
+           (defenseur->armées@pre->size() <> defenseur->armées@post->size()) ) and
            attaquant->armées@post->size() >= 1 and
            let lancesDes : Sequence(OclMessage) =
            De^^lancer() in
