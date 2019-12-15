@@ -31,9 +31,19 @@ context De::lancer(): Integer
 context Joueur::territoire::armées->size() : Integer
     init: 35 - (Jeu::joueur->size() - 3) * 5
 
+-- L'attaquant laissera toujours au moins un pion d'armée sur le territoire attaquant
 context Jeu::attaquer(attaquant: Territoire, defenseur: Territoire)
-    pre: attaquant.voisins->includes(defenseur) and attaquant->armées->size() >= 2
-    post:  attaquant->armées@pre->size() != attaquant->armées->size() or defenseur->armées@pre->size() != defenseur->armées->size()
+    pre: attaquant.voisins->includes(defenseur) and attaquant->armées->size() >= 2 and
+         attaquant.propriétaire <> defenseur.propriétaire 
+    post:  attaquant->armées@pre->size() <> attaquant->armées->size() or 
+           defenseur->armées@pre->size() <> defenseur->armées->size() and
+           attaquant->armées@post->size() >= 1
+           
+-- Les déplacements d'armées ne laisse jamais un territoire innocupé     
+context Jeu::renfort(origine: Territoire, destination: Territoire)
+    pre: origine.propriétaire = destination.propriétaire and 
+         origine.voisins->includes(destination) and origine->armées->size() >= 2
+    post: origine->armées@post->size() >= 1
     
     
 ----
