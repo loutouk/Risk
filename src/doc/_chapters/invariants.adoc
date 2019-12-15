@@ -37,7 +37,10 @@ context Jeu::attaquer(attaquant: Territoire, defenseur: Territoire)
          attaquant.propriétaire <> defenseur.propriétaire 
     post:  attaquant->armées@pre->size() <> attaquant->armées->size() or 
            defenseur->armées@pre->size() <> defenseur->armées->size() and
-           attaquant->armées@post->size() >= 1
+           attaquant->armées@post->size() >= 1 and
+           let lancesDes : Sequence(OclMessage) =
+           De^^lancer() in
+           lancesDes->size() < attaquant->armées@pre->size() - 1 and lancesDes->size() < 3
            
 -- Les déplacements d'armées ne laisse jamais un territoire innocupé     
 context Jeu::renfort(origine: Territoire, destination: Territoire)
