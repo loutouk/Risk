@@ -2,9 +2,17 @@
 
 [source,ocl]
 ----
-context Etudiant::age() : Integer
-post correct: result = (today - naissance).years()
+context Jeu inv:
+    self.joueur->size() >= 3 and self.joueur->size() <= 6
 
+context Continent inv:
+    self.name = "Afrique" implies self.territoire->size() = 6
+    self.name = "Afrique" implies self.territoire->size() = 6
+    self.name = "Afrique" implies self.territoire->size() = 6
+    self.name = "Afrique" implies self.territoire->size() = 6
+    self.name = "Afrique" implies self.territoire->size() = 6
+    
+    
 context Typename::operationName(param1: type1, ...): Type
 post: result = ...
 
