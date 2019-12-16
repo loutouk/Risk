@@ -1,10 +1,16 @@
 <div id="lobby-frame">
     <h1 id="lobby-main-title"> Bienvenue </h1>
-    <a routerLink="/create" routerLinkActive="true" id="lobby-create-game-button">
-      New Risk Game
-    </a>
     <br>
-    <a routerLink="/join" routerLinkActive="false" id="lobby-join-game-button">
-      Join Game
-    </a>   
+    <br>
+    <label>Player name : 
+      <input [(ngModel)]="player.name" placeholder="Pseudo">
+    </label>
+    <br>
+    <div *ngIf="player.name != ''">
+      <button id="player-ready-button" (click)="onClickReady()">
+        Ready
+      </button> 
+    </div>
+    <br>
+    <br>   
 </div>

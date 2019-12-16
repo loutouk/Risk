@@ -5,22 +5,21 @@ import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LobbyComponent } from './lobby/lobby.component';
-import { GameCreateComponent } from './game-create/game-create.component';
-import { WaitingRoomComponent } from './waiting-room/waiting-room.component';
-import {DemoMaterialModule} from './material-module';
+import { GameComponent } from './game/game.component';
+import { InlineSVGModule } from 'ng-inline-svg';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     LobbyComponent,
-    GameCreateComponent,
-    WaitingRoomComponent,
-    DemoMaterialModule
+    GameComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    InlineSVGModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

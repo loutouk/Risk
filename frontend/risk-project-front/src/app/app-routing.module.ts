@@ -1,8 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { LobbyComponent } from './lobby/lobby.component';
-import { GameCreateComponent} from './game-create/game-create.component';
-import { WaitingRoomComponent} from './waiting-room/waiting-room.component';
+import { GameComponent } from './game/game.component';
 
 const routes: Routes = [
   { path: '',
@@ -12,12 +11,9 @@ const routes: Routes = [
   { path: 'lobby',
   component: LobbyComponent
   },
-  { path: 'create',
-  component: GameCreateComponent
-  },
-  { path: 'waitingRoom',
-  component: WaitingRoomComponent
-  } 
+  { path: 'game',
+  component: GameComponent
+  }
 ];
 
 @NgModule({
