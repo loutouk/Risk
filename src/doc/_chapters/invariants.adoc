@@ -13,15 +13,8 @@ context Continent inv:
     self.name = "Amérique du Nord" implies self.territoire->size() = 9 and
     self.name = "Amérique du Sud" implies self.territoire->size() = 4
 
-context Pioche inv:
+context Jeu inv:
     self.joueur->size() >= 3 and self.joueur->size() <= 6
-
--- Il n'y a que 42 cartes qui sont soit dans la pioche soit dans la défausse
-context Pioche::carte->size() : Integer
-    derive: 42 - Defausse::carte->size()
-    
-context Defausse::carte->size() : Integer
-    derive: 42 - Pioche::carte->size()
 
 -- Ce sont des dés de 6
 context De::lancer(): Integer
