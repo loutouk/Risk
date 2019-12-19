@@ -42,7 +42,7 @@ L'initialisation est terminée. Le joueur précédent le joueur courant a fini s
 
 [arabic]
 . Le joueur entre en phase de renfort.
-.. Le joueur reçoit des armées selon les territoires qu'il possède. Nombre d'armées = arrondiInférieur(nombreDeTerritoirePossédés/3). *extension 1*
+.. Le joueur reçoit des armées selon les territoires qu'il possède. Nombre d'armées = Max(3,arrondiInférieur(nombreDeTerritoirePossédés/3)). *extension 1*
 .. Le joueur peut échanger des jeux de 3 cartes de sa main contre des armées. Voir UC4 Echange de cartes.
 .. Le joueur pose ses nouvelles armées sus ses territoires occupés de la façon qu'il souhaite.
 . Le joueur entre en phase d'attaque. *extension 2*
