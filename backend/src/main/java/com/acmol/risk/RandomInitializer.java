@@ -42,7 +42,7 @@ public class RandomInitializer implements ArmyInitializer {
         // Start by allocating each territory to a player, one territory per player at a time
         for(Continent continent : continents) {
             for(Territory territory : continent.territories) {
-                ArrayList modified = territoryOwner.get(players[currentPlayer]);
+                ArrayList<Territory> modified = territoryOwner.get(players[currentPlayer]);
                 modified.add(territory);
                 territoryOwner.put(players[currentPlayer], modified);
                 territory.owner = players[currentPlayer];
@@ -57,14 +57,14 @@ public class RandomInitializer implements ArmyInitializer {
             boolean allocationDone = false;
             while(armyAllocation.get(player) < availableArmy && ! allocationDone) {
                 for (Territory territory : territoryOwner.get(player)) {
+                    if(new Random().nextInt(2) == 0) { // 50% chance
+                        continue; // randomly changes territory to allocate army randomly
+                    }
                     if(armyAllocation.get(player) >= availableArmy) {
                        allocationDone = true;
                     } else {
                         armyAllocation.put(player, armyAllocation.get(player) + 1);
                         territory.army = territory.army + 1;
-                    }
-                    if(new Random().nextInt(2) == 0) { // 50% chance
-                        continue; // randomly changes territory to allocate army randomly
                     }
                 }
             }

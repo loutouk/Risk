@@ -86,11 +86,11 @@ public class GameController {
      */
     public StringMessage getPlayersData(String playerId) {
         if(players.containsKey(playerId)) {
-            String resp="";
+            StringBuilder resp = new StringBuilder();
             for(Player p : players.values()){
-                resp += p.name + ":"+p.playerNumber+",";
+                resp.append(p.name).append(":").append(p.playerNumber).append(",");
             }
-            return new StringMessage(resp, "newPlayer");
+            return new StringMessage(resp.toString(), "newPlayer");
         }
         else {
             return new StringMessage("Not authorized","error");
@@ -134,8 +134,9 @@ public class GameController {
      */
 	public Message initGame() {
         JSONParser jsonParser = new JSONParser();
-        // Territories as continent thing and as neighbors should have the same reference when the object is the same
-        HashMap<String, Territory> createdTerritories = new HashMap<>();
+        // Territories considered as continent's inland  and as neighbors should have the same reference when the object is the same
+        // This is to allow operations working on reference to work properly. Ex: continents.contains(territory)
+        HashMap<String, Territory> createdTerritories = new HashMap<>(); // To memorize and reuse already created objects
         try (FileReader reader = new FileReader(MAP_CONFIG_FILE))
         {
             JSONObject obj = (JSONObject) jsonParser.parse(reader);
@@ -153,7 +154,7 @@ public class GameController {
                     JSONArray neighbors = (JSONArray) territoryObj.get("voisins");
                     neighbors.forEach(neighbor -> {
                         JSONObject neighborObj = (JSONObject) neighbor;
-                        Territory tneighbor = null;
+                        Territory tneighbor;
                         if(createdTerritories.get(neighborObj.get("id").toString()) != null){
                             tneighbor = createdTerritories.get(neighborObj.get("id").toString());
                         }else{
@@ -331,7 +332,7 @@ public class GameController {
             gameMessage = "Player " + winnerPlayerName + " won the game!";
             return new GameMessage(this, "error");
         }
-        if(findPlayerByNumber(currentPlayerNumber).sessionId != playerId) {
+        if( ! findPlayerByNumber(currentPlayerNumber).sessionId.equals(playerId)) {
             gameMessage = findPlayerByNumber(currentPlayerNumber).name + " has to play before!";
             return new GameMessage(this, "error");
         }
@@ -369,8 +370,8 @@ public class GameController {
                 defenseDices.add(rollTheDice());
             }
 
-            Collections.sort(attackDices, Collections.reverseOrder());
-            Collections.sort(defenseDices, Collections.reverseOrder());
+            attackDices.sort(Collections.reverseOrder());
+            defenseDices.sort(Collections.reverseOrder());
 
             for (int i = 0; i < defenseDices.size(); i++) {
                 if (defenseDices.get(i) >= attackDices.get(i)) {
@@ -399,7 +400,7 @@ public class GameController {
      * @return the list of Territory a player owns. That is where it has at least one unit on it
      */
     public ArrayList<Territory> getPlayerTerritories(String playerId) {
-        ArrayList<Territory> territories = new ArrayList<Territory>();
+        ArrayList<Territory> territories = new ArrayList<>();
         for (Continent c : continents) {
             for (Territory t : c.territories) {
                 if (t.owner.equals(players.get(playerId))) {
