@@ -1,0 +1,21 @@
+<div id="lobby-frame">
+    <h1 id="lobby-main-title"> Bienvenue </h1>
+    <br>
+    <br>
+    <label>Player name : 
+      <input [(ngModel)]="player.name" placeholder="Pseudo">
+    </label>
+    <br>
+    <div *ngIf="player.name != ''">
+      <button id="player-ready-button" (click)="onClickReady()">
+        Ready
+      </button> 
+    </div>
+    <br>
+    <br>  
+    <div id="game-board-notification">   
+      <div class="alert alert-warning alert-dismissible fade show" *ngIf="warning">
+        {{warningMessage}}
+      </div>
+    </div> 
+</div>
