@@ -54,7 +54,7 @@ context Jeu::nombreDeRenfort(joueur: Joueur) : Integer
                         if each.proprétaire = joueur.nom then answer = answer + 1))
                         
                         
-context Jeu::joueurGagnant() : Joueur
+context Jeu::partieTerminée() : Boolean
     post: return = jeu->continents->territoires->isUnique(propriétaire)
     
 ----
