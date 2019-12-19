@@ -14,8 +14,7 @@ export class DatastoreService {
 
   private gameContent : GameContent;
 
-  private player : Player;
-  
+ 
 
   constructor() {  }  
 
@@ -27,14 +26,5 @@ export class DatastoreService {
   public setGameContent(gameContentData)
   {
     this.gameContent = gameContentData;
-  }
-
-  public setPlayer(player_data){
-    this.player = player_data;
-  }
-
-  public getPlayer(): Player
-  {
-    return this.player;
   }
 }

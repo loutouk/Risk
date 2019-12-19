@@ -15,10 +15,16 @@ import {GameContent} from '../classes/model/gamecontent';
 export class LobbyComponent implements OnInit {
   player: Player = {
     name: '',
-    id: null   
+    id: null ,
+    number:null 
   };
   
-  readySubscription: any;   
+  connectionSubscription: any;   
+
+  // Variables utiles pour la génération de notifications
+  warning: boolean;
+  warningMessage: string;   
+    
 
   constructor(
     private router: Router,
@@ -28,29 +34,50 @@ export class LobbyComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+    this.websocket.connect();
   }
   ngOnDestroy()
   {
-    this.readySubscription.unsubscribe();
+    //this.websocket.getConnectionSubscription().unsubscribe();
   }
 
   onClickReady(){ 
-      this.websocket.connect();       
-      // Appelle le serveur et lui donne le pseudo du joueur et attend la réponse
-      this.readySubscription = this.websocket.readySubscription(this.player.name).subscribe(content => {
-        // Le serveur renvoi au client un id qui lui est propre
-        let data = JSON.parse(content.body);
-        this.player.id = data.playerId;
-        this.datastore.setPlayer(this.player);
-        // Le client subscribe au channel /game/
-        this.websocket.startGameSubscription().subscribe(content => {
-          // Le serveur envoie manuellement une réponse quand tous les joueurs souhaités ont rejoint
-          // Et retourne une nouvelle partie initialisée
-          let gameContent = JSON.parse(content.body);
-          this.datastore.setGameContent(new GameContent(gameContent));
-          this.router.navigate(["game"]);
-        });        
-      });  
+    // Appelle le serveur et lui donne le pseudo du joueur et attend la réponse    
+      /*
+      this.websocket.connectionSubscription(this.player.name).subscribe((msg)=>{
+        this.handleResponse(msg);       
+      });    */
+      let that = this;
+      
+      if(this.player.name){       
+        this.websocket.startConnectionSubscription(this.player.name).subscribe((msg)=>{
+          let data = JSON.parse(msg.body);
+          if(data.id == 'ok'){
+            that.player.number = parseInt(data.content,10);           
+            that.websocket.setPlayer(this.player);
+            that.router.navigateByUrl("/game");
+          }
+          else if(data.id=='started'){
+            that.enableWarning("Game is already started !");
+          }
+        });
+        this.websocket.sendConnection(this.player.name);
+      }
   }
 
+  // Active une notification avec le message contenu dans le paramètre msg
+  enableWarning(msg: string)
+  {
+    this.warning = true;
+    this.warningMessage = msg;
+    let that = this;
+    setTimeout(function(){that.disableWarning();},7000);
+  }
+   
+  disableWarning()
+  {
+    this.warning = false;
+    this.warningMessage = "";
+  }  
+   
 }

@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  websocketRegisterUrl: "ws://localhost:8080/register",
+  websocketRegisterUrl: "http://localhost:8080/endpoint",
   serverUrl:"http://localhost:4200/" 
 };
 

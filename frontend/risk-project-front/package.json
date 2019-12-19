@@ -26,6 +26,7 @@
     "ng-inline-svg": "^9.1.0",
     "raphael": "^2.3.0",
     "rxjs": "~6.4.0",
+    "sockjs-client": "^1.4.0",
     "stompjs": "^2.3.3",
     "tslib": "^1.10.0",
     "uuid": "^3.3.3",

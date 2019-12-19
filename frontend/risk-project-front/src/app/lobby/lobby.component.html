@@ -12,5 +12,10 @@
       </button> 
     </div>
     <br>
-    <br>   
+    <br>  
+    <div id="game-board-notification">   
+      <div class="alert alert-warning alert-dismissible fade show" *ngIf="warning">
+        {{warningMessage}}
+      </div>
+    </div> 
 </div>

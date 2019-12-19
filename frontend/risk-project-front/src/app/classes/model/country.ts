@@ -1,7 +1,7 @@
 export class Country
 {
     id: string;    
-    idPlayer : number;
+    namePlayer : string;
     nbArmee : number;
     adjCountries : string[];
 
@@ -11,8 +11,8 @@ export class Country
         this.adjCountries = adjCountries;
     }
 
-    setIdPlayer(idPlayer){
-        this.idPlayer=idPlayer;
+    setIdPlayer(namePlayer){
+        this.namePlayer=namePlayer;
     }
     setNbArmee(nbArmee){
         this.nbArmee=nbArmee;

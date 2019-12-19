@@ -2,9 +2,9 @@
     "continents": [ 
         {
             "id":"Africa",
-            "pays":[
+            "territories":[
                 {
-                    "id":"EastAfrica",
+                    "id":"EastAfrica",                   
                     "voisins":[
                         {
                             "id":"MiddleEast"
@@ -27,7 +27,7 @@
                     ]
                 },
                 {
-                    "id":"Egypt",
+                    "id":"Egypt",                   
                     "voisins":[
                         {
                             "id":"MiddleEast"
@@ -44,7 +44,7 @@
                     ]
                  },
                 {
-                    "id":"Congo",
+                    "id":"Congo",                   
                     "voisins":[                      
                         {
                             "id":"EastAfrica"
@@ -58,7 +58,7 @@
                     ]
                 },
                 {
-                    "id":"Madagascar",
+                    "id":"Madagascar",                   
                     "voisins":[                      
                         {
                             "id":"EastAfrica"
@@ -69,7 +69,7 @@
                     ]
                 },
                 {
-                    "id":"SouthAfrica",
+                    "id":"SouthAfrica",                   
                     "voisins":[                      
                         {
                             "id":"EastAfrica"
@@ -83,7 +83,7 @@
                     ]
                 },
                 {
-                    "id":"NorthAfrica",
+                    "id":"NorthAfrica",                   
                     "voisins":[
                         {
                             "id":"EastAfrica"
@@ -106,9 +106,9 @@
         },
         {
             "id":"Asia",
-            "pays":[
+            "territories":[
                 {
-                    "id":"Afghanistan",
+                    "id":"Afghanistan",                   
                     "voisins":[
                         {
                             "id":"India"
@@ -128,7 +128,7 @@
                     ]
                 },
                 {
-                    "id":"India",
+                    "id":"India",                   
                     "voisins":[
                         {
                             "id":"Afghanistan"
@@ -145,7 +145,7 @@
                     ]
                  },                 
                 {
-                    "id":"Irkutsk",
+                    "id":"Irkutsk",                   
                     "voisins":[
                         {
                             "id":"Mongolia"
@@ -162,7 +162,7 @@
                     ]
                 },
                 {
-                    "id":"Kamchatka",
+                    "id":"Kamchatka",                   
                     "voisins":[
                         {
                             "id":"Japan"
@@ -182,7 +182,7 @@
                     ]
                 },
                 {
-                    "id":"MiddleEast",
+                    "id":"MiddleEast",                   
                     "voisins":[
                         {
                             "id":"EastAfrica"
@@ -205,7 +205,7 @@
                     ]
                 },
                 {
-                    "id":"Mongolia",
+                    "id":"Mongolia",                   
                     "voisins":[
                         {
                             "id":"Japan"
@@ -225,7 +225,7 @@
                     ]
                 },
                 {
-                    "id":"Siam",
+                    "id":"Siam",                   
                     "voisins":[
                         {
                             "id":"India"
@@ -239,7 +239,7 @@
                     ]
                 },
                 {
-                    "id":"China",
+                    "id":"China",                   
                     "voisins":[
                         {
                             "id":"Siam"
@@ -262,7 +262,7 @@
                     ]
                 },
                 {
-                    "id":"Japan",
+                    "id":"Japan",                   
                     "voisins":[
                         {
                             "id":"Kamchatka"
@@ -273,7 +273,7 @@
                     ]
                  },
                 {
-                    "id":"Siberia",
+                    "id":"Siberia",                   
                     "voisins":[
                         {
                             "id":"China"
@@ -293,7 +293,7 @@
                     ]
                 },
                 {
-                    "id":"Ural",
+                    "id":"Ural",                   
                     "voisins":[
                         {
                             "id":"Siberia"
@@ -310,7 +310,7 @@
                     ]
                 },
                 {
-                    "id":"Yakutsk",
+                    "id":"Yakutsk",                   
                     "voisins":[
                         {
                             "id":"Siberia"
@@ -327,9 +327,9 @@
         },
         {
             "id":"Australia",
-            "pays":[
+            "territories":[
                 {
-                    "id":"EasternAustrailia",
+                    "id":"EasternAustrailia",                   
                     "voisins":[
                         {
                             "id":"WesternAustrailia"
@@ -340,7 +340,7 @@
                     ]
                 },
                 {
-                    "id":"NewGuniea",
+                    "id":"NewGuniea",                   
                     "voisins":[
                         {
                             "id":"WesternAustrailia"
@@ -354,7 +354,7 @@
                     ]
                  },                 
                 {
-                    "id":"WesternAustrailia",
+                    "id":"WesternAustrailia",                   
                     "voisins":[
                         {
                             "id":"EasternAustrailia"
@@ -368,7 +368,7 @@
                     ]
                 },
                 {
-                    "id":"Indonesia",
+                    "id":"Indonesia",                   
                     "voisins":[
                         {
                             "id":"WesternAustrailia"
@@ -385,9 +385,9 @@
         },
         {
             "id":"Europe",
-            "pays":[
+            "territories":[
                 {
-                    "id":"GreatBritain",
+                    "id":"GreatBritain",                   
                     "voisins":[
                         {
                             "id":"WesternEurope"
@@ -404,7 +404,7 @@
                     ]
                 },
                 {
-                    "id":"Iceland",
+                    "id":"Iceland",                   
                     "voisins":[
                         {
                             "id":"GreatBritain"
@@ -418,7 +418,7 @@
                     ]
                  },                 
                 {
-                    "id":"NorthernEurope",
+                    "id":"NorthernEurope",                   
                     "voisins":[
                         {
                             "id":"WesternEurope"
@@ -438,7 +438,7 @@
                     ]
                 },
                 {
-                    "id":"Scandinavia",
+                    "id":"Scandinavia",                   
                     "voisins":[
                         {
                             "id":"Iceland"
@@ -455,7 +455,7 @@
                     ]
                 },
                 {
-                    "id":"SouthernEurope",
+                    "id":"SouthernEurope",                   
                     "voisins":[
                         {
                             "id":"WesternEurope"
@@ -475,7 +475,7 @@
                     ]
                  },                 
                 {
-                    "id":"Ukraine",
+                    "id":"Ukraine",                   
                     "voisins":[
                         {
                             "id":"Scandinavia"
@@ -498,7 +498,7 @@
                     ]
                 },
                 {
-                    "id":"WesternEurope",
+                    "id":"WesternEurope",                   
                     "voisins":[
                         {
                             "id":"SouthernEurope"
@@ -518,9 +518,9 @@
         },
         {
             "id":"NorthAmerica",
-            "pays":[
+            "territories":[
                 {
-                    "id":"Alaska",
+                    "id":"Alaska",                   
                     "voisins":[
                         {
                             "id":"NorthwestTerritory"
@@ -534,7 +534,7 @@
                     ]
                 },
                 {
-                    "id":"Alberta",
+                    "id":"Alberta",                   
                     "voisins":[
                         {
                             "id":"NorthwestTerritory"
@@ -551,7 +551,7 @@
                     ]
                  },                 
                 {
-                    "id":"CentralAmerica",
+                    "id":"CentralAmerica",                   
                     "voisins":[
                         {
                             "id":"WesternUnitedStates"
@@ -565,7 +565,7 @@
                     ]
                 },
                 {
-                    "id":"EasternUnitedStates",
+                    "id":"EasternUnitedStates",                   
                     "voisins":[
                         {
                             "id":"CentralAmerica"
@@ -582,7 +582,7 @@
                     ]
                 },
                 {
-                    "id":"Greenland",
+                    "id":"Greenland",                   
                     "voisins":[
                         {
                             "id":"Iceland"
@@ -599,7 +599,7 @@
                     ]
                  },                 
                 {
-                    "id":"NorthwestTerritory",
+                    "id":"NorthwestTerritory",                   
                     "voisins":[
                         {
                             "id":"Greenland"
@@ -616,7 +616,7 @@
                     ]
                 },
                 {
-                    "id":"Ontario",
+                    "id":"Ontario",                   
                     "voisins":[
                         {
                             "id":"Greenland"
@@ -639,7 +639,7 @@
                     ]
                 },                 
                 {
-                    "id":"WesternUnitedStates",
+                    "id":"WesternUnitedStates",                                       
                     "voisins":[
                         {
                             "id":"EasternUnitedStates"
@@ -656,7 +656,7 @@
                     ]
                 },
                 {
-                    "id":"Quebec",
+                    "id":"Quebec",                   
                     "voisins":[
                         {
                             "id":"Greenland"
@@ -673,9 +673,9 @@
         },
         {
             "id":"SouthAmerica",
-            "pays":[
+            "territories":[
                 {
-                    "id":"Argentina",
+                    "id":"Argentina",                   
                     "voisins":[
                         {
                             "id":"Peru"
@@ -686,7 +686,7 @@
                     ]
                 },
                 {
-                    "id":"Brazil",
+                    "id":"Brazil",                   
                     "voisins":[
                         {
                             "id":"NorthAfrica"
@@ -703,7 +703,7 @@
                     ]
                  },                 
                 {
-                    "id":"Peru",
+                    "id":"Peru",                   
                     "voisins":[
                         {
                             "id":"Brazil"
@@ -717,7 +717,7 @@
                     ]
                 },
                 {
-                    "id":"Venezuela",
+                    "id":"Venezuela",                   
                     "voisins":[
                         {
                             "id":"Brazil"
