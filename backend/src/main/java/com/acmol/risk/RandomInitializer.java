@@ -31,7 +31,7 @@ public class RandomInitializer implements ArmyInitializer {
         }
 
         int currentPlayer = 0; // index on the player we are allocating resoures
-        int availableArmy = RandomInitializer.STARTING_ARMY_PER_PLAYER_NB[players.length];
+        int availableArmy = RandomInitializer.STARTING_ARMY_PER_PLAYER_NB[players.length-1];
         HashMap<Player, ArrayList<Territory>> territoryOwner = new HashMap<>();
         HashMap<Player, Integer> armyAllocation = new HashMap<>();
         for(Player player : players) {
@@ -55,20 +55,19 @@ public class RandomInitializer implements ArmyInitializer {
         // Then allocate remaining armies on the player's territories
         for(Player player : players) {
             boolean allocationDone = false;
-            while(armyAllocation.get(players[currentPlayer]) < availableArmy && ! allocationDone) {
+            while(armyAllocation.get(player) < availableArmy && ! allocationDone) {
                 for (Territory territory : territoryOwner.get(player)) {
                     if(armyAllocation.get(player) >= availableArmy) {
                        allocationDone = true;
                     } else {
-                        armyAllocation.put(players[currentPlayer], armyAllocation.get(players[currentPlayer]) + 1);
+                        armyAllocation.put(player, armyAllocation.get(player) + 1);
                         territory.army = territory.army + 1;
                     }
-                    if(new Random().nextInt(10) > 5) {
+                    if(new Random().nextInt(2) == 0) { // 50% chance
                         continue; // randomly changes territory to allocate army randomly
                     }
                 }
             }
-            currentPlayer = (currentPlayer + 1) % players.length; // next player
         }
 
     }
