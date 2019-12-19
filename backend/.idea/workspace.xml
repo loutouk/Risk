@@ -1,0 +1,743 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="ANALYZE_TEST_SOURCES" value="false" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="a1fcfa1b-789a-4003-bac7-47b0142c890e" name="Default Changelist" comment="" />
+    <ignored path="$PROJECT_DIR$/classes/" />
+    <ignored path="$PROJECT_DIR$/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageViewManager">
+    <option name="myElementSize" value="190" />
+  </component>
+  <component name="DefaultGradleProjectSettings">
+    <option name="isMigrated" value="true" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/acmol/risk/GameController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="9108">
+              <caret line="518" column="7" selection-start-line="518" selection-start-column="7" selection-end-line="518" selection-end-column="7" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/acmol/risk/AlternatePathfinder.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="324">
+              <caret line="18" selection-start-line="18" selection-end-line="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/acmol/risk/Application.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>launch</find>
+      <find>connectionId</find>
+      <find>initGame</find>
+      <find>addPlayer</find>
+      <find>subscr</find>
+      <find>pic/game</find>
+      <find>app/c</find>
+      <find>#na</find>
+      <find>appe</find>
+      <find>room</find>
+      <find>cont</find>
+      <find>par</find>
+      <find>pa</find>
+      <find>greetings</find>
+      <find>launc</find>
+      <find>/topic/game</find>
+      <find>skipfr</find>
+      <find>Temp</find>
+      <find>temp</find>
+      <find>availablePath</find>
+      <find>he ga</find>
+      <find>currentPlayer</find>
+      <find>ACTIONS</find>
+      <find>currentActionNumber</find>
+      <find>skipf</find>
+      <find>a Mes</find>
+      <find>getPlayerTerritories</find>
+      <find>reinforcementUnitAvailable</find>
+      <find>deal</find>
+      <find>STARTING_ARMY_PER_PLAYER_NB</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>Message</replace>
+      <replace>defenseDices</replace>
+      <replace>this</replace>
+    </replaceStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/main/java/hello/Greeting.java" />
+        <option value="$PROJECT_DIR$/src/main/java/hello/GreetingController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/hello/WebSocketConfig.java" />
+        <option value="$PROJECT_DIR$/src/test/java/hello/GreetingIntegrationTests.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/acmol/risk/Joueur.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapconfig.json" />
+        <option value="$PROJECT_DIR$/src/main/java/com/acmol/risk/Plateau.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/acmol/risk/JSONParser.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/acmol/risk/PlateauMessage.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/acmol/risk/MessageIntegrationTests.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/acmol/risk/TerritoryDTO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/acmol/risk/ContinentDTO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/acmol/risk/GameDTO.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/index.html" />
+        <option value="$PROJECT_DIR$/src/main/java/com/acmol/risk/Game.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/app.js" />
+        <option value="$PROJECT_DIR$/src/test/java/com/acmol/risk/MessageIntegrationTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/acmol/risk/CardType.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/acmol/risk/StringMessage.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/acmol/risk/Player.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/acmol/risk/Territory.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/acmol/risk/WebSocketConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/acmol/risk/Card.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/acmol/risk/GameMessage.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/acmol/risk/Message.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/acmol/risk/Application.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/acmol/risk/Continent.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/acmol/risk/AlternatePathfinder.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/acmol/risk/PathFinder.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/acmol/risk/BasicPathfinder.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/acmol/risk/ManualInitializer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/acmol/risk/GameController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/acmol/risk/ServerController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/acmol/risk/ArmyInitializer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/acmol/risk/RandomInitializer.java" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="10" />
+    <option name="y" value="49" />
+    <option name="width" value="1346" />
+    <option name="height" value="699" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="gs-messaging-stomp-websocket" type="b2602c69:ProjectViewProjectNode" />
+              <item name="complete" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gs-messaging-stomp-websocket" type="b2602c69:ProjectViewProjectNode" />
+              <item name="complete" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gs-messaging-stomp-websocket" type="b2602c69:ProjectViewProjectNode" />
+              <item name="complete" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gs-messaging-stomp-websocket" type="b2602c69:ProjectViewProjectNode" />
+              <item name="complete" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gs-messaging-stomp-websocket" type="b2602c69:ProjectViewProjectNode" />
+              <item name="complete" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="risk" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.Application (1)">
+    <configuration name="Application (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.acmol.risk.Application" />
+      <module name="gs-messaging-stomp-websocket" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.acmol.risk.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="hello.Application" />
+      <module name="gs-messaging-stomp-websocket" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="hello.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.acmol.risk.Application" />
+      <module name="gs-messaging-stomp-websocket" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.acmol.risk.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.acmol.risk.Application" />
+      <module name="gs-messaging-stomp-websocket" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.acmol.risk.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Application (1)" />
+        <item itemvalue="Application.Application" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a1fcfa1b-789a-4003-bac7-47b0142c890e" name="Default Changelist" comment="" />
+      <created>1576518463311</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1576518463311</updated>
+    </task>
+    <task id="LOCAL-00001" summary="merge Game in GameController">
+      <created>1576667335277</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1576667335277</updated>
+    </task>
+    <task id="LOCAL-00002" summary="javadoc, optimize imports, remove unused variables">
+      <created>1576678234133</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1576678234133</updated>
+    </task>
+    <task id="LOCAL-00003" summary="javadoc on method">
+      <created>1576683204177</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1576683204177</updated>
+    </task>
+    <task id="LOCAL-00004" summary="add javadoc">
+      <created>1576683882847</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1576683882847</updated>
+    </task>
+    <task id="LOCAL-00005" summary="descending sort directly instead of ascending and reverse (quicker)">
+      <created>1576765976751</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1576765976751</updated>
+    </task>
+    <task id="LOCAL-00006" summary="comment code on eliminated player's behaviour">
+      <created>1576767158173</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1576767158173</updated>
+    </task>
+    <task id="LOCAL-00007" summary="verify that the number of players matches what the ArmyInitalizer Interface can handle">
+      <created>1576767944050</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1576767944050</updated>
+    </task>
+    <task id="LOCAL-00008" summary="typo">
+      <created>1576768046037</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1576768046037</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20726173" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32872504" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.2596006" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39938557" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.15053764" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Application Servers" order="10" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.14439324" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Kubernetes Explorer" order="4" />
+      <window_info anchor="right" id="Google Cloud Storage" order="5" show_stripe_button="false" />
+      <window_info anchor="right" id="Maven" order="6" />
+      <window_info anchor="right" id="Theme Preview" order="7" />
+      <window_info anchor="right" id="Capture Analysis" order="8" />
+      <window_info anchor="right" id="Palette&#9;" order="9" />
+      <window_info anchor="right" id="Coverage" order="10" side_tool="true" weight="0.32980332" />
+    </layout>
+    <layout-to-restore>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18910742" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32872504" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.25345623" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39938557" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Application Servers" order="10" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.32872504" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Kubernetes Explorer" order="4" />
+      <window_info anchor="right" id="Google Cloud Storage" order="5" show_stripe_button="false" />
+      <window_info anchor="right" id="Maven" order="6" />
+      <window_info anchor="right" id="Theme Preview" order="7" />
+      <window_info anchor="right" id="Capture Analysis" order="8" />
+      <window_info anchor="right" id="Palette&#9;" order="9" />
+    </layout-to-restore>
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.js" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="merge Game in GameController" />
+    <MESSAGE value="javadoc, optimize imports, remove unused variables" />
+    <MESSAGE value="javadoc on method" />
+    <MESSAGE value="add javadoc" />
+    <MESSAGE value="descending sort directly instead of ascending and reverse (quicker)" />
+    <MESSAGE value="comment code on eliminated player's behaviour" />
+    <MESSAGE value="verify that the number of players matches what the ArmyInitalizer Interface can handle" />
+    <MESSAGE value="typo" />
+    <option name="LAST_COMMIT_MESSAGE" value="typo" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/gs_messaging_stomp_websocket$Application.ic" NAME="Application Coverage Results" MODIFIED="1576615597548" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.acmol.risk.*</FILTER>
+    </SUITE>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/java/hello/HelloMessage.java" />
+    <entry file="file://$PROJECT_DIR$/gs-messaging-stomp-websocket.iml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/main.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mvnw.cmd">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mvnw">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-234">
+          <caret line="5" column="32" selection-start-line="5" selection-start-column="32" selection-end-line="5" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gradlew">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gradlew.bat">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapconfig.json" />
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_211/src.zip!/java/util/function/BiConsumer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="137">
+          <caret line="52" column="9" selection-start-line="52" selection-start-column="9" selection-end-line="52" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/acmol/risk/JSONParser.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/acmol/risk/TerritoryDTO.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/acmol/risk/ContinentDTO.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/acmol/risk/GameDTO.java" />
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="46" column="44" selection-start-line="46" selection-start-column="44" selection-end-line="46" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/acmol/risk/ArmyReinforce.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/AlternatePathfinder.java" />
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-messaging/5.2.1.RELEASE/spring-messaging-5.2.1.RELEASE.jar!/org/springframework/messaging/handler/annotation/support/PayloadMethodArgumentResolver.class">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/acmol/risk/Game.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="468">
+          <caret line="26" column="60" selection-start-line="26" selection-start-column="60" selection-end-line="26" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1242">
+          <caret line="69" column="14" selection-start-line="69" selection-start-column="14" selection-end-line="69" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/acmol/risk/MessageIntegrationTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="211">
+          <caret line="100" column="14" lean-forward="true" selection-start-line="100" selection-start-column="14" selection-end-line="100" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/acmol/risk/Card.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/acmol/risk/CardType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="2" selection-start-line="2" selection-end-line="8" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/acmol/risk/WebSocketConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="56">
+          <caret line="9" column="42" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/acmol/risk/Territory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="20">
+          <caret line="7" column="35" selection-start-line="7" selection-start-column="35" selection-end-line="7" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/acmol/risk/StringMessage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="2" selection-start-line="2" selection-end-line="8" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/acmol/risk/Continent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="19" selection-start-line="19" selection-end-line="23" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/acmol/risk/Player.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="6" selection-start-line="6" selection-end-line="10" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/acmol/risk/PathFinder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/acmol/risk/BasicPathfinder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="15" column="29" selection-start-line="15" selection-start-column="29" selection-end-line="15" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/acmol/risk/Message.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/acmol/risk/GameMessage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/acmol/risk/ManualInitializer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="12" column="28" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/acmol/risk/ServerController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="7" selection-start-line="7" selection-end-line="7" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Javadoc/com/acmol/risk/ArmyInitializer.IncorretPlayerNumber.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="125" column="43" selection-start-line="125" selection-start-column="43" selection-end-line="125" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/acmol/risk/RandomInitializer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="702">
+          <caret line="41" column="83" selection-start-line="41" selection-start-column="83" selection-end-line="41" selection-end-column="83" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/acmol/risk/ArmyInitializer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="15" column="18" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/acmol/risk/GameController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="9108">
+          <caret line="518" column="7" selection-start-line="518" selection-start-column="7" selection-end-line="518" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/acmol/risk/AlternatePathfinder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/acmol/risk/Application.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>gs-messaging-stomp-websocket</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8.0_211</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
