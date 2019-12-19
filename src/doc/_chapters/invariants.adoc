@@ -51,7 +51,7 @@ context Jeu::nombreDeRenfort(joueur: Joueur) : Integer
     pre: joueur.estEliminé = false
     post: return = Max(3, jeu->continents->territoires->iterate(each: Territoire;
                         answer: Integer = 0 |
-                        if each.proprétaire = joueur.nom then answer = answer + 1))
+                        if each.proprétaire = joueur then answer = answer + 1))
                         
                         
 context Jeu::partieTerminée() : Boolean
