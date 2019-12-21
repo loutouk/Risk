@@ -1,14 +1,14 @@
 package com.acmol.risk;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import org.json.simple.JSONArray;
+/*import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
 import java.io.FileNotFoundException;
 import java.io.FileReader;
-import java.io.IOException;
+import java.io.IOException;*/
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
@@ -137,7 +137,7 @@ public class GameController {
      * @return a GameMessage with game data if the game started, a simple StringMessage with error information otherwise
      */
 	public Message initGame() {
-        JSONParser jsonParser = new JSONParser();
+        /*JSONParser jsonParser = new JSONParser();
         // Territories considered as continent's inland  and as neighbors should have the same reference when the object is the same
         // This is to allow operations working on reference to work properly. Ex: continents.contains(territory)
         HashMap<String, Territory> createdTerritories = new HashMap<>(); // To memorize and reuse already created objects
@@ -187,7 +187,7 @@ public class GameController {
             return new StringMessage("Can not initialize the  Player number is incorrect. ", "error");
         }
         this.gameStarted=true;
-        this.currentReinforce=this.reinforcementUnitAvailable(findPlayerByNumber(currentPlayerNumber).sessionId);
+        this.currentReinforce=this.reinforcementUnitAvailable(findPlayerByNumber(currentPlayerNumber).sessionId);*/
         return new GameMessage(this, "start");
     }
 
