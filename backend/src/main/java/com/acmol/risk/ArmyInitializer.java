@@ -20,7 +20,7 @@ public interface ArmyInitializer {
      *  Allocate the army for the initialization
      * @param continents all the game's Continent
      * @param players all the game's Player
-     * @throws IncorretPlayerNumber if there are too many players for STARTING_ARMY_PER_PLAYER_NB to handle
+     * @throws IncorretPlayerNumber if there are too many or too few players for STARTING_ARMY_PER_PLAYER_NB to handle
      */
     void initArmy(ArrayList<Continent> continents, Player[] players) throws IncorretPlayerNumber;
 

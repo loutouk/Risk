@@ -23,6 +23,10 @@ public class RandomInitializer implements ArmyInitializer {
     @Override
     public void initArmy(ArrayList<Continent> continents, Player[] players) throws IncorretPlayerNumber {
 
+        if(continents == null || players == null) {
+            return;
+        }
+
         if(players.length > ArmyInitializer.MAX_PLAYER || players.length < ArmyInitializer.MIN_PLAYER) {
             throw new IncorretPlayerNumber(
                     "The number of player is " + players.length +

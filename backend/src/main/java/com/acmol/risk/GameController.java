@@ -42,6 +42,7 @@ public class GameController {
     public String winnerPlayerName;
     @JsonIgnore
     public HashMap<String, Player> players;
+    public ArrayList<Player> eliminatedPlayers;
     public boolean gameStarted;
     public int currentPlayerNumber;
     public int currentActionNumber;
@@ -57,6 +58,7 @@ public class GameController {
         this.gameIsOver = false;
         this.winnerPlayerName = "No winner";
         this.continents = new ArrayList<>();
+        this.eliminatedPlayers = new ArrayList<>();
         this.gameMessage = "";
         this.currentReinforce=0;
     }
@@ -65,13 +67,17 @@ public class GameController {
      * Used when a player join the server to play a game
      * @param playerId the unique id that identifies a player, allocated by the server
      * @param playerName the player name, chosen by the player, and used for display
-     * @return a text message with the player number and if the connection succeed or failed
+     * @return a text message with information on the failure or success of the connection
      */
     public StringMessage addPlayer(String playerId, String playerName) {
         if(gameStarted){
             return new StringMessage("Game already started","started");
         } else if (players.size() >= MAX_PLAYERS){
             return new StringMessage(playerName + " wants to connect but server is full", "error");
+        } else if(playerId == null) {
+            return new StringMessage("playerId field is null and should not be", "error");
+        } else if(playerName == null) {
+            return new StringMessage("playerName field is null and should not be", "error");
         } else {
         	Player newPlayer = new Player(playerName,playerId);
             players.put(playerId, newPlayer);
@@ -98,7 +104,7 @@ public class GameController {
     }
 
     /**
-     * Used when one of the connected client wanted to start a game
+     * Used when one of the connected client wants to start a game
      * @param playerId the player the triggered the game start
      * @return a GameMessage with game data if the game started, a simple StringMessage with error information otherwise
      */
@@ -176,7 +182,7 @@ public class GameController {
         }
         ArmyInitializer armyInitializer = new RandomInitializer();
         try {
-            // Just need player's data and not the object reference
+            // We can cast from map to array because method just needs player's data and not the object references
             armyInitializer.initArmy(continents, players.values().toArray(new Player[0]));
         } catch (ArmyInitializer.IncorretPlayerNumber incorretPlayerNumber) {
             incorretPlayerNumber.printStackTrace();
@@ -194,7 +200,9 @@ public class GameController {
      * @return the number of unit available
      */
     public int reinforcementUnitAvailable(String playerId) {
-
+        if(playerId == null) {
+            return 0;
+        }
         // Checks if a player still got territories (may have been eliminated), then it should not receive unit
         // TODO deal with eliminated players in an explicit way to efficiently identify and memorize them
     	for(Continent c : this.continents) {
@@ -232,19 +240,23 @@ public class GameController {
         if(message != null) {
             return message;
         }
+        if(playerId == null || config == null) {
+            gameMessage = "Missing parameters for the reinforcement call";
+            return new GameMessage(this, "error");
+        }
         Player currentPlayer = findPlayerByNumber(currentPlayerNumber);
         int armyAllocated = 0;
         int armyAvailable = reinforcementUnitAvailable(playerId);
         String[] countriesAndUnits = config.split(",");
-        // TODO trim strings to support spaces like CountryA:5,   CountryB:2,  CountryC:7
         for(int i=0 ; i<countriesAndUnits.length ; i++) {
             String[] countryAndUnit = countriesAndUnits[i].split(":");
             if(countryAndUnit.length != 2) {
                 gameMessage = "Wrong format in army allocation. Should be countryA:4,countryB:2...";
                 return new GameMessage(this, "error");
             } else {
-                Territory territory = findTerritoryById(countryAndUnit[0]);
-                int armyForTerritory = Integer.valueOf(countryAndUnit[1]);
+                // trim strings to support spaces in input parameters
+                Territory territory = findTerritoryById(countryAndUnit[0].trim());
+                int armyForTerritory = Integer.valueOf(countryAndUnit[1].trim());
                 if(territory == null) {
                     gameMessage = "Wrong territory name: " + countryAndUnit[0];
                     return new GameMessage(this, "error");
@@ -294,23 +306,26 @@ public class GameController {
         if(message != null) {
             return message;
         }
+        if(config == null) {
+            gameMessage = "Missing parameters for attack call.";
+            return new GameMessage(this, "error");
+        }
         String[] parts = config.split(",");
-        // TODO trim strings to support spaces like CountryA:5,   CountryB:2,  CountryC:7
         if(parts.length != 3) {
             gameMessage = "Wrong format. Attack should be like countryA,countryB,unitNumber";
             return new GameMessage(this, "error");
         }
-        Territory attackTerritory = findTerritoryById(parts[0]);
-        Territory defenseTerritory = findTerritoryById(parts[1]);
-        int unitNumber = Integer.parseInt(parts[2]);
+        Territory attackTerritory = findTerritoryById(parts[0].trim());
+        Territory defenseTerritory = findTerritoryById(parts[1].trim());
+        int unitNumber = Integer.parseInt(parts[2].trim());
         if(attack(attackTerritory, defenseTerritory, unitNumber)){
             Player winnerPlayer = winner();
             if(winnerPlayer != null) {
                 winnerPlayerName = winnerPlayer.name;
                 gameMessage = "Player " + winnerPlayerName + " won the game!";
                 this.gameIsOver=true;
-                // TODO restart to handle a new game
                 return new GameMessage(this, "ok");
+                // TODO restart to handle a new game
             }
             gameMessage = "Attack executed successfully from " + attackTerritory.id + " to " + defenseTerritory.id + ".";
             return new GameMessage(this, "ok");
@@ -353,10 +368,12 @@ public class GameController {
     public boolean attack(Territory attackTerr, Territory defenseTerr, int unitInvolved) {
         ArrayList<Integer> attackDices;
         ArrayList<Integer> defenseDices;
-        if (attackTerr.neighbors.contains(defenseTerr) && 
+        if (    attackTerr != null &&
+                defenseTerr != null &&
+                attackTerr.neighbors.contains(defenseTerr) &&
                 attackTerr.army > unitInvolved && 
                 unitInvolved <= MAX_UNIT_PER_ATTACK && 
-                !attackTerr.owner.equals(defenseTerr.owner)) {
+                !attackTerr.owner.equals(defenseTerr.owner) ) {
             
             attackDices = new ArrayList<>();
             defenseDices = new ArrayList<>();
@@ -440,10 +457,12 @@ public class GameController {
      * @return true if the move is accepted, false otherwise
      */
     public boolean moveUnit(String idPlayer, Territory territoryA, Territory territoryB, int unit) {
-        if (territoryA.owner == players.get(idPlayer) &&
+        if (    territoryA != null &&
+                territoryB != null &&
+                territoryA.owner == players.get(idPlayer) &&
                 territoryB.owner == players.get(idPlayer) &&
                 new BasicPathfinder().availablePath(territoryA, territoryB) &&
-                unit < territoryA.army) {
+                unit < territoryA.army ) {
             territoryA.army -= unit;
             territoryB.army += unit;
         } else {
@@ -463,15 +482,18 @@ public class GameController {
         if(message != null) {
             return message;
         }
+        if(playerId == null || config == null) {
+            gameMessage = "Missing parameters for the fortify call";
+            return new GameMessage(this, "error");
+        }
         String[] parts = config.split(",");
-        // TODO trim strings to support spaces like CountryA:5,   CountryB:2,  CountryC:7
         if(parts.length != 3) {
             gameMessage = "Wrong format. Fortify should be like countryA,countryB,unitNumber";
             return new GameMessage(this, "error");
         }
-        Territory terrA = findTerritoryById(parts[0]);
-        Territory terrB = findTerritoryById(parts[1]);
-        int unitNumber = Integer.parseInt(parts[2]);
+        Territory terrA = findTerritoryById(parts[0].trim());
+        Territory terrB = findTerritoryById(parts[1].trim());
+        int unitNumber = Integer.parseInt(parts[2].trim());
         if(moveUnit(playerId, terrA, terrB, unitNumber)) {
             gameMessage = "Fortify from " + terrA.id + " to " + terrB.id + " done with success.";
             return new GameMessage(this, "ok");
@@ -502,7 +524,7 @@ public class GameController {
          }
          else {
         	 String nextplayerName = findPlayerByNumber(currentPlayerNumber).name;
-        	 gameMessage = "Reinforcement phase is over for " + findPlayerByNumber(currentPlayerNumber).name + ".Time for " + nextplayerName + " to play!";
+        	 gameMessage = "Reinforcement phase is over for " + findPlayerByNumber(currentPlayerNumber).name + ". Time for " + nextplayerName + " to play!";
         	 return new GameMessage(this, "ok");       
          }
     }
@@ -530,5 +552,9 @@ public class GameController {
             }
         }
         return null;
+    }
+
+    public boolean isEliminated(Player player) {
+        return false;
     }
 }

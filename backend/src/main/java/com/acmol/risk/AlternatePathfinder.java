@@ -21,6 +21,9 @@ public class AlternatePathfinder implements PathFinder {
      */
     @Override
     public boolean availablePath(Territory territoryA, Territory territoryB) {
+        if(territoryA == null || territoryB == null) {
+            return false;
+        }
         return recursivePathFinding(territoryA, territoryB, new ArrayList<>());
     }
 

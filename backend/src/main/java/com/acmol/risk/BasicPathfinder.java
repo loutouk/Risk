@@ -18,6 +18,9 @@ public class BasicPathfinder implements PathFinder {
      */
     @Override
     public boolean availablePath(Territory territoryA, Territory territoryB) {
+        if(territoryA == null || territoryB == null) {
+            return false;
+        }
         return territoryA.neighbors.contains(territoryB);
     }
 }

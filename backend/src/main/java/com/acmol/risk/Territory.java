@@ -22,6 +22,6 @@ public class Territory {
         this.id = id;
         this.army = 0;
         this.owner = null;
-        this.neighbors = new ArrayList<Territory>();
+        this.neighbors = new ArrayList<>();
     }
 }
