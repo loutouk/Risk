@@ -16,6 +16,7 @@ public class ManualInitializer implements ArmyInitializer {
      * Allocate the army for the initialization. The allocation is done turn by turn by the players
      * @param continents all the game's Continent
      * @param players all the game's Player
+     * @deprecated because army allocation is done by {@link com.acmol.risk.RandomInitializer}
      * @throws IncorretPlayerNumber if there is too much players according to the STARTING_ARMY_PER_PLAYER_NB array
      */
     @Override

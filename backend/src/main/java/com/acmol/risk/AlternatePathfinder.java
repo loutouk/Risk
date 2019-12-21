@@ -34,7 +34,7 @@ public class AlternatePathfinder implements PathFinder {
         exploredTerritories.add(territoryA);
         for (Territory t : territoryA.neighbors) {
             if (!exploredTerritories.contains(t)) {
-                return (recursivePathFinding(t, territoryB, exploredTerritories));
+                return recursivePathFinding(t, territoryB, exploredTerritories);
             }
         }
         return false; // useless because of the recursive call done above

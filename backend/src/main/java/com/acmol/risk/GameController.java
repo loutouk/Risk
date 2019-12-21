@@ -251,7 +251,7 @@ public class GameController {
             } else {
                 // trim strings to support spaces in input parameters
                 Territory territory = findTerritoryById(countryAndUnit[0].trim());
-                int armyForTerritory = Integer.valueOf(countryAndUnit[1].trim());
+                int armyForTerritory = Integer.parseInt(countryAndUnit[1].trim());
                 if(territory == null) {
                     gameMessage = "Wrong territory name: " + countryAndUnit[0];
                     return new GameMessage(this, "error");
@@ -318,7 +318,7 @@ public class GameController {
             if(winnerPlayer != null) {
                 winnerPlayerName = winnerPlayer.name;
                 gameMessage = "Player " + winnerPlayerName + " won the game!";
-                this.gameIsOver=true;
+                this.gameIsOver = true;
                 return new GameMessage(this, "ok");
                 // TODO restart to handle a new game
             }

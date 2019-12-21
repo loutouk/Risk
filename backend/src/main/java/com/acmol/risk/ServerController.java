@@ -31,8 +31,7 @@ public class ServerController {
 	public StringMessage onConnection(@Header("simpSessionId") String playerId, @DestinationVariable("playerName") String playerName) {
 	    return gameController.addPlayer(playerId, playerName);
 	}
-	
-	
+
 	@MessageMapping("/actualizeplayers")
 	@SendTo("/topic/game")
 	public StringMessage onActualizePlayers(@Header("simpSessionId") String playerId) {
