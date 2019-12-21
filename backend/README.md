@@ -11,9 +11,11 @@ You can then browse your localhost where your sonar server is running to access 
 
 You can configure the satic analysis parameters in the pom.xml
 
-## Unit testing with JUnit
+## Auto-generated unit tests with JUnit and EvoSuit
 
-The unit tests can be found in the test folder
+EvoSuite is a tool that automatically generates unit tests for Java software. EvoSuite uses an evolutionary algorithm to generate JUnit tests. The EvoSuite Maven plugin provides the following generate goal used to generate test cases with EvoSuite. Tests will be generated for all classes in all submodules. EvoSuite creates the tests in the `.evosuite` folder. 
+
+`mvn compile evosuite:generate`
 
 ## Unit testing coverage with Cobertura
 
@@ -27,20 +29,7 @@ You can configure the check phase in the pom.xml
 
 `<configuration>
     <check>
-        <haltOnFailure>true</haltOnFailure>
-        <branchRate>75</branchRate>
-        <lineRate>85</lineRate>
-        <totalBranchRate>75</totalBranchRate>
-        <totalLineRate>85</totalLineRate>
-        <packageLineRate>75</packageLineRate>
-        <packageBranchRate>85</packageBranchRate>
-        <regexes>
-            <regex>
-                <pattern>com.baeldung.algorithms.dijkstra.*</pattern>
-                <branchRate>60</branchRate>
-                <lineRate>50</lineRate>
-            </regex>
-        </regexes>
+        [...]
     </check>
 </configuration>`
 
