@@ -1,0 +1,2 @@
+[MASTER] 22:48:17.983 [pool-2-thread-1] WARN  TestSuiteSerialization - Cannot load tests because file does not exist: C:\Users\loutouk\Documents\Computing\Master\Analyse Conception\Jeu RISK\projet-2019\backend\.evosuite\evosuite-seeds\com.acmol.risk.Territory.seed
+[MASTER] 22:48:18.123 [pool-2-thread-1] WARN  TimeController - Phase INITIALIZATION lasted too long, 1 seconds more than allowed.

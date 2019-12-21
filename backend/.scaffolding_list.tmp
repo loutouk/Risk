@@ -1,0 +1,12 @@
+com.acmol.risk.AlternatePathfinder_ESTest_scaffolding
+com.acmol.risk.BasicPathfinder_ESTest_scaffolding
+com.acmol.risk.Card_ESTest_scaffolding
+com.acmol.risk.Continent_ESTest_scaffolding
+com.acmol.risk.GameController_ESTest_scaffolding
+com.acmol.risk.GameMessage_ESTest_scaffolding
+com.acmol.risk.ManualInitializer_ESTest_scaffolding
+com.acmol.risk.Message_ESTest_scaffolding
+com.acmol.risk.Player_ESTest_scaffolding
+com.acmol.risk.RandomInitializer_ESTest_scaffolding
+com.acmol.risk.StringMessage_ESTest_scaffolding
+com.acmol.risk.Territory_ESTest_scaffolding

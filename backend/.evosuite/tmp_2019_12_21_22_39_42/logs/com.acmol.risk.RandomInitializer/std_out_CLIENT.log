@@ -1,0 +1,4 @@
+[MASTER] 22:40:27.169 [pool-2-thread-1] WARN  TestSuiteSerialization - Cannot load tests because file does not exist: C:\Users\loutouk\Documents\Computing\Master\Analyse Conception\Jeu RISK\projet-2019\backend\.evosuite\evosuite-seeds\com.acmol.risk.RandomInitializer.seed
+[MASTER] 22:42:41.321 [pool-2-thread-1] WARN  TestSuiteMinimizer - Minimization timeout. Roll back to original test suite
+[MASTER] 22:42:41.322 [pool-2-thread-1] WARN  TimeController - Phase MINIMIZATION lasted too long, 2 seconds more than allowed.
+[MASTER] 22:42:57.380 [pool-2-thread-1] WARN  SimpleMutationAssertionGenerator - Reached maximum time to generate assertions, aborting assertion generation

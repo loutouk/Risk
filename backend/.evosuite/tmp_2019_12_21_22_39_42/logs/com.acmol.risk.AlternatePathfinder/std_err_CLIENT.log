@@ -1,0 +1,38 @@
+[MASTER] 22:43:30.200 [pool-2-thread-1] ERROR ConcreteClassAnalyzer - Problem for com.acmol.risk.AlternatePathfinder. Class not found: org.springframework.http.codec.multipart.SynchronossPartHttpMessageReader$SynchronossPartGenerator
+java.lang.ClassNotFoundException: reactor/core/publisher/BaseSubscriber
+	at org.evosuite.instrumentation.InstrumentingClassLoader.instrumentClass(InstrumentingClassLoader.java:201)
+	at org.evosuite.instrumentation.InstrumentingClassLoader.loadClass(InstrumentingClassLoader.java:168)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:348)
+	at org.evosuite.setup.ConcreteClassAnalyzer.getConcreteClassesImpl(ConcreteClassAnalyzer.java:130)
+	at org.evosuite.setup.ConcreteClassAnalyzer.getConcreteClasses(ConcreteClassAnalyzer.java:61)
+	at org.evosuite.setup.TestClusterGenerator.addDependency(TestClusterGenerator.java:878)
+	at org.evosuite.setup.TestClusterGenerator.addDependencies(TestClusterGenerator.java:789)
+	at org.evosuite.setup.TestClusterGenerator.addDependencyClass(TestClusterGenerator.java:985)
+	at org.evosuite.setup.TestClusterGenerator.resolveDependencies(TestClusterGenerator.java:358)
+	at org.evosuite.setup.TestClusterGenerator.generateCluster(TestClusterGenerator.java:137)
+	at org.evosuite.setup.DependencyAnalysis.analyze(DependencyAnalysis.java:118)
+	at org.evosuite.setup.DependencyAnalysis.analyzeClass(DependencyAnalysis.java:132)
+	at org.evosuite.TestSuiteGenerator.initializeTargetClass(TestSuiteGenerator.java:110)
+	at org.evosuite.TestSuiteGenerator.generateTestSuite(TestSuiteGenerator.java:130)
+	at org.evosuite.rmi.service.ClientNodeImpl$1.run(ClientNodeImpl.java:145)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.NoClassDefFoundError: reactor/core/publisher/BaseSubscriber
+	at java.lang.ClassLoader.defineClass1(Native Method)
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:763)
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:642)
+	at org.evosuite.instrumentation.InstrumentingClassLoader.instrumentClass(InstrumentingClassLoader.java:194)
+	... 20 common frames omitted
+Caused by: java.lang.ClassNotFoundException: Class 'reactor/core/publisher/BaseSubscriber.class' should be in target project, but could not be found!
+	at org.evosuite.instrumentation.InstrumentingClassLoader.instrumentClass(InstrumentingClassLoader.java:201)
+	at org.evosuite.instrumentation.InstrumentingClassLoader.loadClass(InstrumentingClassLoader.java:168)
+	... 24 common frames omitted
+Caused by: java.lang.ClassNotFoundException: Class 'reactor/core/publisher/BaseSubscriber.class' should be in target project, but could not be found!
+	at org.evosuite.instrumentation.InstrumentingClassLoader.instrumentClass(InstrumentingClassLoader.java:188)
+	... 25 common frames omitted
+[MASTER] 22:43:30.207 [pool-2-thread-1] ERROR ConcreteClassAnalyzer - Removing class from inheritance tree
+[MASTER] 22:44:52.859 [pool-2-thread-1] ERROR JUnitAnalyzer - Ran out of time while checking tests
