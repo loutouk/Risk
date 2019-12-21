@@ -6,12 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="a1fcfa1b-789a-4003-bac7-47b0142c890e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/acmol/risk/AlternatePathfinder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/acmol/risk/AlternatePathfinder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/acmol/risk/ArmyInitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/acmol/risk/ArmyInitializer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/acmol/risk/BasicPathfinder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/acmol/risk/BasicPathfinder.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/acmol/risk/GameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/acmol/risk/GameController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/acmol/risk/RandomInitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/acmol/risk/RandomInitializer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/acmol/risk/Territory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/acmol/risk/Territory.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/classes/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -32,12 +27,10 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/acmol/risk/GameController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="130">
-              <caret line="528" column="10" lean-forward="true" selection-start-line="528" selection-start-column="10" selection-end-line="528" selection-end-column="10" />
+            <state relative-caret-position="172">
+              <caret line="204" column="8" selection-start-line="204" selection-start-column="8" selection-end-line="204" selection-end-column="8" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#23619#23620#0" expanded="true" />
-                <element signature="e#23647#23648#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -56,19 +49,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>initGame</find>
-      <find>addPlayer</find>
-      <find>subscr</find>
-      <find>pic/game</find>
-      <find>app/c</find>
-      <find>#na</find>
-      <find>appe</find>
-      <find>room</find>
-      <find>cont</find>
-      <find>par</find>
-      <find>pa</find>
-      <find>greetings</find>
-      <find>launc</find>
       <find>/topic/game</find>
       <find>skipfr</find>
       <find>Temp</find>
@@ -86,6 +66,19 @@
       <find>STARTING_ARMY_PER_PLAYER_NB</find>
       <find>rs.len</find>
       <find>Build</find>
+      <find>TODO</find>
+      <find>skipFortify</find>
+      <find>atta</find>
+      <find>reinfo</find>
+      <find>eliminatedPlayers</find>
+      <find>isEliminated</find>
+      <find>currentReinforce</find>
+      <find>playerNum</find>
+      <find>isEl</find>
+      <find>currentPlayerNumber</find>
+      <find>finish</find>
+      <find>finishTurn</find>
+      <find>availa</find>
     </findStrings>
     <replaceStrings>
       <replace>Message</replace>
@@ -344,7 +337,14 @@
       <option name="project" value="LOCAL" />
       <updated>1576768046037</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="trim on input param and check not null">
+      <created>1576934357473</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1576934357473</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -360,7 +360,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32872504" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.44546852" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.953917" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39938557" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -426,21 +426,8 @@
     <MESSAGE value="comment code on eliminated player's behaviour" />
     <MESSAGE value="verify that the number of players matches what the ArmyInitalizer Interface can handle" />
     <MESSAGE value="typo" />
-    <option name="LAST_COMMIT_MESSAGE" value="typo" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/main/java/com/acmol/risk/GameController.java</url>
-          <line>556</line>
-          <properties class="com.acmol.risk.GameController" method="isEliminated">
-            <option name="EMULATED" value="true" />
-          </properties>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="trim on input param and check not null" />
+    <option name="LAST_COMMIT_MESSAGE" value="trim on input param and check not null" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/gs_messaging_stomp_websocket$Application.ic" NAME="Application Coverage Results" MODIFIED="1576615597548" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
@@ -655,12 +642,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/acmol/risk/GameController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
-          <caret line="528" column="10" lean-forward="true" selection-start-line="528" selection-start-column="10" selection-end-line="528" selection-end-column="10" />
+        <state relative-caret-position="172">
+          <caret line="204" column="8" selection-start-line="204" selection-start-column="8" selection-end-line="204" selection-end-column="8" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#23619#23620#0" expanded="true" />
-            <element signature="e#23647#23648#0" expanded="true" />
           </folding>
         </state>
       </provider>

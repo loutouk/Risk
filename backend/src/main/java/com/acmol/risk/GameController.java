@@ -42,7 +42,6 @@ public class GameController {
     public String winnerPlayerName;
     @JsonIgnore
     public HashMap<String, Player> players;
-    public ArrayList<Player> eliminatedPlayers;
     public boolean gameStarted;
     public int currentPlayerNumber;
     public int currentActionNumber;
@@ -58,7 +57,6 @@ public class GameController {
         this.gameIsOver = false;
         this.winnerPlayerName = "No winner";
         this.continents = new ArrayList<>();
-        this.eliminatedPlayers = new ArrayList<>();
         this.gameMessage = "";
         this.currentReinforce=0;
     }
@@ -203,29 +201,26 @@ public class GameController {
         if(playerId == null) {
             return 0;
         }
-        // Checks if a player still got territories (may have been eliminated), then it should not receive unit
-        // TODO deal with eliminated players in an explicit way to efficiently identify and memorize them
-    	for(Continent c : this.continents) {
-    		for(Territory t : c.territories) {
-    			if(t.owner.playerNumber == this.currentPlayerNumber) {
-    			     // A minimum of army per turn is guaranteed whatever the number of territories you own
-    				 return Math.max(getPlayerTerritories(playerId).size() / 3, MIN_REINFORCE_UNITS);
-    			}
-    		}
-    	}
-    	return 0;
+        // A minimum of army per turn is guaranteed whatever the number of territories you own
+        return Math.max(getPlayerTerritories(playerId).size() / 3, MIN_REINFORCE_UNITS);
     }
 
     /**
-     * Force the current player to end his turn (if he no longer has any territory)
-     * @return a Message with the game context and information about the success or failure of the operation
+     * End the current player turn and set the current player to the next one that is not eliminated
+     * @return a Message with the game context and information about the next turn
      */
     public Message finishTurn() {
-        currentPlayerNumber = (currentPlayerNumber + 1) % players.size();
+        do {
+            currentPlayerNumber = (currentPlayerNumber + 1) % players.size();
+        } while(isEliminated(findPlayerByNumber(currentPlayerNumber))); // skip to the next player
+
         currentActionNumber = 0;
-        this.currentReinforce = this.reinforcementUnitAvailable(findPlayerByNumber(currentPlayerNumber).sessionId);
+
+        // Compute reinforcement unit for next player and give the information back to the client so it does not need to ask for it
+        currentReinforce = reinforcementUnitAvailable(findPlayerByNumber(currentPlayerNumber).sessionId);
+
         String nextplayerName = findPlayerByNumber(currentPlayerNumber).name;
-        gameMessage = "Time for " + nextplayerName + " to play!";
+        gameMessage = "Reinforcement phase is over for " + findPlayerByNumber(currentPlayerNumber).name + ". Time for " + nextplayerName + " to play!";
         return new GameMessage(this, "ok");
     }
 
@@ -513,20 +508,7 @@ public class GameController {
          if(message != null) {
              return message;
          }
-         currentPlayerNumber = (currentPlayerNumber + 1) % players.size();
-         currentActionNumber = 0;
-         this.currentReinforce=this.reinforcementUnitAvailable(findPlayerByNumber(currentPlayerNumber).sessionId);
-
-         // If the player reinforcement is null, it means that it has been eliminated, thus we should end its turn
-         // TODO deal with eliminated players in an explicit way to efficiently identify and memorize them
-         if(this.currentReinforce == 0) {
-        	 return this.finishTurn();
-         }
-         else {
-        	 String nextplayerName = findPlayerByNumber(currentPlayerNumber).name;
-        	 gameMessage = "Reinforcement phase is over for " + findPlayerByNumber(currentPlayerNumber).name + ". Time for " + nextplayerName + " to play!";
-        	 return new GameMessage(this, "ok");       
-         }
+         return finishTurn();
     }
 
 
@@ -554,7 +536,19 @@ public class GameController {
         return null;
     }
 
+    /**
+     * Verify if a player has been eliminated from the game by losing all its territories
+     * @param player the player for which we are interested in knowing if it lost
+     * @return true if it lost, false otherwise
+     */
     public boolean isEliminated(Player player) {
-        return false;
+        for(Continent continent : continents) {
+            for(Territory territory : continent.territories) {
+                if(territory.owner == player) {
+                    return false;
+                }
+            }
+        }
+        return true;
     }
 }
