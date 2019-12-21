@@ -5,19 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a1fcfa1b-789a-4003-bac7-47b0142c890e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/acmol/risk/AlternatePathfinderTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/acmol/risk/BasicPathfinderTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/acmol/risk/ContinentTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/acmol/risk/GameControllerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/acmol/risk/RandomInitializerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/acmol/risk/ServerControllerTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/acmol/risk/AlternatePathfinder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/acmol/risk/AlternatePathfinder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/acmol/risk/GameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/acmol/risk/GameController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/acmol/risk/ManualInitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/acmol/risk/ManualInitializer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/acmol/risk/ServerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/acmol/risk/ServerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/acmol/risk/MessageIntegrationTest.java" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/classes/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -102,16 +90,16 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="85" column="41" lean-forward="true" selection-start-line="85" selection-start-column="41" selection-end-line="85" selection-end-column="41" />
+            <state relative-caret-position="51">
+              <caret line="77" selection-start-line="77" selection-end-line="94" selection-end-column="32" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/acmol/risk/ServerController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="162">
@@ -506,7 +494,14 @@
       <option name="project" value="LOCAL" />
       <updated>1576939194088</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="set up static and unit testing">
+      <created>1576951779518</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1576951779518</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -622,7 +617,8 @@
     <MESSAGE value="typo" />
     <MESSAGE value="trim on input param and check not null" />
     <MESSAGE value="clearer eliminated players management" />
-    <option name="LAST_COMMIT_MESSAGE" value="clearer eliminated players management" />
+    <MESSAGE value="set up static and unit testing" />
+    <option name="LAST_COMMIT_MESSAGE" value="set up static and unit testing" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -880,13 +876,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/acmol/risk/ServerController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="30" column="135" selection-start-line="30" selection-start-column="135" selection-end-line="30" selection-end-column="135" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/acmol/risk/WebSocketConfig.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="70">
@@ -907,8 +896,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="85" column="41" lean-forward="true" selection-start-line="85" selection-start-column="41" selection-end-line="85" selection-end-column="41" />
+        <state relative-caret-position="51">
+          <caret line="77" selection-start-line="77" selection-end-line="94" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/acmol/risk/ServerController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="30" column="135" selection-start-line="30" selection-start-column="135" selection-end-line="30" selection-end-column="135" />
         </state>
       </provider>
     </entry>
