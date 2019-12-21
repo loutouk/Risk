@@ -5,53 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a1fcfa1b-789a-4003-bac7-47b0142c890e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Javadoc/allclasses-frame.html" beforeDir="false" afterPath="$PROJECT_DIR$/Javadoc/allclasses-frame.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Javadoc/allclasses-noframe.html" beforeDir="false" afterPath="$PROJECT_DIR$/Javadoc/allclasses-noframe.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Javadoc/com/acmol/risk/AlternatePathfinder.html" beforeDir="false" afterPath="$PROJECT_DIR$/Javadoc/com/acmol/risk/AlternatePathfinder.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Javadoc/com/acmol/risk/Application.html" beforeDir="false" afterPath="$PROJECT_DIR$/Javadoc/com/acmol/risk/Application.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Javadoc/com/acmol/risk/ArmyInitializer.IncorretPlayerNumber.html" beforeDir="false" afterPath="$PROJECT_DIR$/Javadoc/com/acmol/risk/ArmyInitializer.IncorretPlayerNumber.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Javadoc/com/acmol/risk/ArmyInitializer.html" beforeDir="false" afterPath="$PROJECT_DIR$/Javadoc/com/acmol/risk/ArmyInitializer.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Javadoc/com/acmol/risk/BasicPathfinder.html" beforeDir="false" afterPath="$PROJECT_DIR$/Javadoc/com/acmol/risk/BasicPathfinder.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Javadoc/com/acmol/risk/Card.html" beforeDir="false" afterPath="$PROJECT_DIR$/Javadoc/com/acmol/risk/Card.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Javadoc/com/acmol/risk/CardType.html" beforeDir="false" afterPath="$PROJECT_DIR$/Javadoc/com/acmol/risk/CardType.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Javadoc/com/acmol/risk/Continent.html" beforeDir="false" afterPath="$PROJECT_DIR$/Javadoc/com/acmol/risk/Continent.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Javadoc/com/acmol/risk/GameController.html" beforeDir="false" afterPath="$PROJECT_DIR$/Javadoc/com/acmol/risk/GameController.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Javadoc/com/acmol/risk/GameMessage.html" beforeDir="false" afterPath="$PROJECT_DIR$/Javadoc/com/acmol/risk/GameMessage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Javadoc/com/acmol/risk/ManualInitializer.html" beforeDir="false" afterPath="$PROJECT_DIR$/Javadoc/com/acmol/risk/ManualInitializer.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Javadoc/com/acmol/risk/Message.html" beforeDir="false" afterPath="$PROJECT_DIR$/Javadoc/com/acmol/risk/Message.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Javadoc/com/acmol/risk/PathFinder.html" beforeDir="false" afterPath="$PROJECT_DIR$/Javadoc/com/acmol/risk/PathFinder.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Javadoc/com/acmol/risk/Player.html" beforeDir="false" afterPath="$PROJECT_DIR$/Javadoc/com/acmol/risk/Player.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Javadoc/com/acmol/risk/RandomInitializer.html" beforeDir="false" afterPath="$PROJECT_DIR$/Javadoc/com/acmol/risk/RandomInitializer.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Javadoc/com/acmol/risk/ServerController.html" beforeDir="false" afterPath="$PROJECT_DIR$/Javadoc/com/acmol/risk/ServerController.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Javadoc/com/acmol/risk/StringMessage.html" beforeDir="false" afterPath="$PROJECT_DIR$/Javadoc/com/acmol/risk/StringMessage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Javadoc/com/acmol/risk/Territory.html" beforeDir="false" afterPath="$PROJECT_DIR$/Javadoc/com/acmol/risk/Territory.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Javadoc/com/acmol/risk/WebSocketConfig.html" beforeDir="false" afterPath="$PROJECT_DIR$/Javadoc/com/acmol/risk/WebSocketConfig.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Javadoc/com/acmol/risk/package-frame.html" beforeDir="false" afterPath="$PROJECT_DIR$/Javadoc/com/acmol/risk/package-frame.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Javadoc/com/acmol/risk/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/Javadoc/com/acmol/risk/package-summary.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Javadoc/com/acmol/risk/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/Javadoc/com/acmol/risk/package-tree.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Javadoc/constant-values.html" beforeDir="false" afterPath="$PROJECT_DIR$/Javadoc/constant-values.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Javadoc/deprecated-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/Javadoc/deprecated-list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Javadoc/help-doc.html" beforeDir="false" afterPath="$PROJECT_DIR$/Javadoc/help-doc.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Javadoc/index-files/index-1.html" beforeDir="false" afterPath="$PROJECT_DIR$/Javadoc/index-files/index-1.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Javadoc/index-files/index-10.html" beforeDir="false" afterPath="$PROJECT_DIR$/Javadoc/index-files/index-10.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Javadoc/index-files/index-11.html" beforeDir="false" afterPath="$PROJECT_DIR$/Javadoc/index-files/index-11.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Javadoc/index-files/index-12.html" beforeDir="false" afterPath="$PROJECT_DIR$/Javadoc/index-files/index-12.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Javadoc/index-files/index-13.html" beforeDir="false" afterPath="$PROJECT_DIR$/Javadoc/index-files/index-13.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Javadoc/index-files/index-14.html" beforeDir="false" afterPath="$PROJECT_DIR$/Javadoc/index-files/index-14.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Javadoc/index-files/index-15.html" beforeDir="false" afterPath="$PROJECT_DIR$/Javadoc/index-files/index-15.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Javadoc/index-files/index-16.html" beforeDir="false" afterPath="$PROJECT_DIR$/Javadoc/index-files/index-16.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Javadoc/index-files/index-17.html" beforeDir="false" afterPath="$PROJECT_DIR$/Javadoc/index-files/index-17.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Javadoc/index-files/index-2.html" beforeDir="false" afterPath="$PROJECT_DIR$/Javadoc/index-files/index-2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Javadoc/index-files/index-3.html" beforeDir="false" afterPath="$PROJECT_DIR$/Javadoc/index-files/index-3.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Javadoc/index-files/index-4.html" beforeDir="false" afterPath="$PROJECT_DIR$/Javadoc/index-files/index-4.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Javadoc/index-files/index-5.html" beforeDir="false" afterPath="$PROJECT_DIR$/Javadoc/index-files/index-5.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Javadoc/index-files/index-6.html" beforeDir="false" afterPath="$PROJECT_DIR$/Javadoc/index-files/index-6.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Javadoc/index-files/index-7.html" beforeDir="false" afterPath="$PROJECT_DIR$/Javadoc/index-files/index-7.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Javadoc/index-files/index-8.html" beforeDir="false" afterPath="$PROJECT_DIR$/Javadoc/index-files/index-8.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Javadoc/index-files/index-9.html" beforeDir="false" afterPath="$PROJECT_DIR$/Javadoc/index-files/index-9.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Javadoc/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Javadoc/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Javadoc/overview-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/Javadoc/overview-tree.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Javadoc/serialized-form.html" beforeDir="false" afterPath="$PROJECT_DIR$/Javadoc/serialized-form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/classes/" />
     <ignored path="$PROJECT_DIR$/target/" />
