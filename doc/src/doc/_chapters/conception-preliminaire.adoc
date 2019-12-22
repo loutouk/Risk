@@ -1,4 +1,4 @@
-:imagesdir: resources/img
+:imagesdir: C:\Users\loutouk\Documents\Computing\Master\Analyse Conception\Jeu RISK\projet-2019\doc\src\doc\_chapters\resources\img\
 
 = Spécification des composants
 
@@ -16,55 +16,32 @@ Cette section décrit le contenu du reste du chapitre  et explique comment le do
 
 image::components.png[]
 
-== Le composant `Game Server`
+== Le composant `Serveur`
 
-Le serveur est responsable de la communication entre client (ordonnancement des tours et distribution des messages). Il vérifie également les opérations de chaque client (est-ce que l'opération est valide ? est-ce que elle respecte les règles de RISK et les cas d'utilisation?). Il assure les parties critiques telles que le lancé de dés (éviter la triche côté client). Il a aussi le rôle de maître de jeu dans le sens où il est chargé de mettre à jour le plateau selon les actions des clients. 
-
-=== Spécification des interfaces
-
-==== Spécification de l'interface A
-	
-Présentation de l'interface en UML (ou HUTN). 
-Description du comportement de chaque opération. 
-Spécification éventuelle des pré-conditions en OCL.
-
-==== Spécification de l'interface B 
-
-== Le composant `Web Client`
-
-Décrire succinctement le comportement du composant.
+Le serveur est responsable de la communication entre client (ordonnancement des tours et distribution des messages). Il vérifie également les opérations de chaque client (est-ce que l'opération est valide ? est-ce bien à ce joueur de jouer ? est-ce que elle respecte les règles de RISK et les cas d'utilisation?). Il assure les parties critiques telles que le lancé de dés (éviter la triche côté client). Il a aussi le rôle de maître de jeu dans le sens où il est chargé de mettre à jour le plateau selon les actions des clients. 
 
 === Spécification des interfaces
 
-==== Spécification de l'interface A
-	
-Présentation de l'interface en UML (ou HUTN). 
-Description du comportement de chaque opération. 
-Spécification éventuelle des pré-conditions en OCL.
+==== Spécification de l'interface Controlleur de Jeu
+
+image::controlleur.png[]
+
+==== Spécification de l'interface Communication Client
+
+image::commclient.png[]
 
 ==== Spécification de l'interface B 
 
+== Le composant `Client`
 
-== Interactions
+Le client fourni une GUI aux joueurs pour réprésenter l'état du jeu et effectuer des actions. Cette interface est aussi responsable pour transmettre et réceptionner les messages en direction et en provenance du serveur.
 
-Objectif: décrire, à haut-niveau, la collaboration entre les composants majeurs, en faisant référence aux besoins.
+=== Spécification des interfaces
 
-Utiliser des interactions, c'est à dire, des diagrammes de séquence et des diagrammes de communication. 
+==== Spécification de l'interface Interface Graphique
 
-** Ne vous limitez pas à une seule interaction par cas d'utilisation
+image::gui.png[]
 
-=== Mise en place d'un jeu
+==== Spécification de l'interface Communication Serveur
 
-==== Interaction: cas nominal
-
-==== Interaction: cas A
-
-==== Interaction: cas B
-
-=== Tour d'un joueur 
-
-==== Interaction: cas nominal
-
-==== Interaction: cas A
-
-==== Interaction: cas B
+image::commserveur.png[]

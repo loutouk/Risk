@@ -1,8 +1,76 @@
+:imagesdir: C:\Users\loutouk\Documents\Computing\Master\Analyse Conception\Jeu RISK\projet-2019\doc\src\doc\_chapters\resources\img\
+
 = Conception détaillée
 
 == Objectif
 Spécifier la structure interne et le comportement des composants en assurant une certaine qualité (évolution, performance, portabilité, testabilité, etc). 
 
-== Le composant WebServer
+== Description de l'initialisation d'une partie
 
-== Le composant WebClient
+=== Algorithme
+
+image::diagramme_activite_initialisation.png[]
+
+=== Scenario optimal
+
+image::diagramme_sequence_initialisation_1.png[]
+
+== Description de la phase de fortification
+
+=== Algorithme
+
+image::diagramme_activite_renfort.png[]
+
+=== Scenario optimal
+
+image::diagramme_sequence_renfort_fortification_1.png[]
+
+=== Scenario suboptimal
+
+image::diagramme_sequence_renfort_fortification_2.png[]
+
+== Description de l'échange de carte
+
+=== Algorithme
+
+image::diagramme_activite_echange_carte.png[]
+
+=== Scenario optimal
+
+image::diagramme_sequence_carte_1.png[]
+
+=== Scenario suboptimal
+
+image::diagramme_sequence_carte_2.png[]
+
+== Description de la phase d'attaque
+
+=== Algorithme
+
+image::diagramme_activite_attaque.png[]
+
+=== Scenario optimal
+
+image::diagramme_sequence_attaque_1.png[]
+
+=== Scenario suboptimal
+
+image::diagramme_sequence_attaque_2.png[]
+
+== Le composant Serveur
+
+=== Package
+
+image::backend.png[]
+
+=== Diagramme de classe
+
+image::classes.png[]
+
+image::interfaces.png[]
+
+== Le composant Client
+
+=== Package
+
+image::app.png[]

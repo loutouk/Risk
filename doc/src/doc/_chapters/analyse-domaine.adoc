@@ -4,7 +4,7 @@
 
 === Objectif
 
-:imagesdir: resources/img
+:imagesdir: C:\Users\loutouk\Documents\Computing\Master\Analyse Conception\Jeu RISK\projet-2019\doc\src\doc\_chapters\resources\img\
 
 
 // Décrire l'objectif de ce chapitre.

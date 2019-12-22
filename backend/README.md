@@ -36,7 +36,7 @@ public void test05()  throws Throwable  {
 
 EvoSuit jar usage for generate the GameController unit tests
 
-`java -jar .\evosuite-1.0.6.jar -class com.acmol.risk.GameController`
+`java -jar .\evosuite-1.0.6.jar -class com.acmol.risk.GameController -projectCP .\target\classes\`
 
 ## Unit testing coverage with Cobertura
 

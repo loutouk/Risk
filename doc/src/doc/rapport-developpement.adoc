@@ -1,4 +1,5 @@
 :includedir: _chapters
+
 = Projet 2019 : Risk
 
 == Auteurs
@@ -9,19 +10,17 @@
 | Boursier Louis | louis.boursier@etu.univ-nantes.fr
 | Filaudeau Éloi | filaudeau.eloi@etu.univ-nantes.fr
 | Lasherme Loïc | loic.lasherme@etu.univ-nantes.fr
+| Nantier Matthias | matthias.nantier@etu.univ-nantes.fr
 |===
 
 == Introduction
 
-Au cours de ce projet nous avons pour but de développer un logiciel réparti permettant de jouer au jeu du Risk. Pour se faire nous devons
-mettre en oeuvre les connaissances vues en cours pour nous permettre de réaliser au mieux ce projet.
+Le but de ce projet est de mettre en oeuvre les connaissances développées dans les modules d'analyse et de conception ainsi que de test logiciel. Dans cet objectif, nous devons développer un logiciel réparti adaptant le jeu de société Risk.
 
-Le jeu du Risk est à la base un jeu de plateau qui se joue de 2 à 6 joueurs. À tour de rôle, chaque joueur va définir un territoire sur lequel
-il placera une unité jusqu'à remplir chaque zone. Une fois cela fait, les joueurs pourront compléter les forces de leur armée sur les zones
-occupées par celle-ci afin de se libérer des unités en main. Une fois cela fait, le jeu peut enfin commencer et le joueur qui possédera tous
-les territoires se verra remporter la victoire.
+Le jeu du Risk est à la base un jeu de plateau qui se joue de 2 à 6 joueurs. À tour de rôle, chaque joueur va définir un territoire sur lequel il placera une unité jusqu'à remplir chaque zone. Une fois cela fait, les joueurs pourront compléter les forces de leur armée sur les zones occupées par celle-ci afin de se libérer des unités en main. Ensuite, le jeu peut enfin commencer et le joueur qui possédera tous
+les territoires se verra remporter la partie.
 
-Nous avons donc pour objectif de penser, modéliser, et implémenter ce jeu décrit brièvement ci-dessus.
+Nous avons donc pour objectif de comprendre, analyser, modéliser, implémenter et tester ce jeu décrit brièvement ci-dessus.
 
 
 == Organisation du document
@@ -35,6 +34,4 @@ include::{includedir}/conception-detaillee.adoc[leveloffset=+1]
 
 == Conclusion
 
-Points forts de votre projet
-
-Limites (points faibles) de votre projet
+Le temps passé sur la phase d'analyse du domaine a porté ses fruits dans le sens cela a simplifié et accéléré la phase de conception. Une conception précise et adaptée au système étudié nous a également permis d'implémenter le logiciel sans difficulté majeures. Cependant, l'implémentation s'est vue simplifiée en omettant notamment la gestion des cartes. Cela nous a été nécessaire pour respecter les délais impartis. Proportionnellement au relativement peu de temps passé sur le projet (quelques semaines), la configuration d'Angular avec Spring a été très chronophage. Les tests nous ont permis d'expérimenter avec la génération automatique, les outils d'analyse statique et de couverture.
