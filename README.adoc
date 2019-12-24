@@ -1,6 +1,7 @@
 = Project 2019: Risk
 
-![RISK game preview](/image/preview.png)
+[RISK game preview](https://gitlab.univ-nantes.fr/E17B270A/projet-2019/blob/master/image/preview.png)
+
 
 == Objectifs 
 
