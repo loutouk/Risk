@@ -1,6 +1,6 @@
 = Project 2019: Risk
 
-![RISK game preview](/image/preview.png?raw=true)
+![RISK game preview](/image/preview.png)
 
 == Objectifs 
 
