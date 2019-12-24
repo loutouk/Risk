@@ -18,6 +18,7 @@ EvoSuite is a tool that automatically generates unit tests for Java software. Ev
 `mvn compile evosuite:generate`
 
 ```java
+// Auto-generated regression test
 @Test(timeout = 4000)
 public void test05()  throws Throwable  {
   RandomInitializer randomInitializer0 = new RandomInitializer();
@@ -31,6 +32,21 @@ public void test05()  throws Throwable  {
      // The number of player is 0 but it should be between 3 and 6
      verifyException("com.acmol.risk.RandomInitializer", e);
   }
+}
+```
+
+Those tests are completed with manually written tests 
+
+```java
+// Manually written functional test
+public void isEliminatedShouldReturnTrue01() {
+    Player eliminatedPlayer = gameController.players.get("playerC");
+    assertEquals(true, gameController.isEliminated(eliminatedPlayer));
+}
+
+public void isEliminatedShouldReturnFalse01() {
+    Player stillInGamePlayer = gameController.players.get("playerA");
+    assertEquals(true, gameController.isEliminated(stillInGamePlayer));
 }
 ```
 

@@ -5,11 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a1fcfa1b-789a-4003-bac7-47b0142c890e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/acmol/risk/GameControllerManualTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../doc/src/doc/_chapters/conception-preliminaire.adoc" beforeDir="false" afterPath="$PROJECT_DIR$/../doc/src/doc/_chapters/conception-preliminaire.adoc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../doc/src/doc/_chapters/resources/img/components.png" beforeDir="false" afterPath="$PROJECT_DIR$/../doc/src/doc/_chapters/resources/img/components.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../doc/src/main/java/fr/alma/risk/RiskServer.java" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/classes/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -27,14 +25,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/acmol/risk/GameController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-350">
+              <caret line="204" column="24" lean-forward="true" selection-start-line="204" selection-start-column="24" selection-end-line="204" selection-end-column="65" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/README.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="FIRST">
-              <first_editor relative-caret-position="190">
-                <caret line="38" column="97" selection-start-line="38" selection-start-column="97" selection-end-line="38" selection-end-column="97" />
-              </first_editor>
-              <second_editor />
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/acmol/risk/GameControllerManualTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="144">
+              <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -46,23 +53,13 @@
       <list>
         <option value="Enum" />
         <option value="Interface" />
-        <option value="Class" />
         <option value="JUnit5 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>currentPlayerNumber</find>
-      <find>finish</find>
-      <find>finishTurn</find>
-      <find>availa</find>
-      <find>winner</find>
-      <find>buil</find>
-      <find>explored</find>
-      <find>askr</find>
-      <find>reinforce</find>
-      <find>sen</find>
       <find>endpoint</find>
       <find>port</find>
       <find>header</find>
@@ -83,6 +80,16 @@
       <find>JS</find>
       <find>com.</find>
       <find>info</find>
+      <find>/*</find>
+      <find>MAP_CONFIG_FILE</find>
+      <find>before</find>
+      <find>initTestCase</find>
+      <find>assert</find>
+      <find>addP</find>
+      <find>DICE_MAX_VAL</find>
+      <find>rollT</find>
+      <find>reinforcementUnitAvailable</find>
+      <find>russia</find>
     </findStrings>
     <replaceStrings>
       <replace>Message</replace>
@@ -139,6 +146,7 @@
         <option value="$PROJECT_DIR$/src/main/java/com/acmol/risk/GameController.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/acmol/risk/ServerControllerTest.java" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/src/test/java/com/acmol/risk/GameControllerManualTest.java" />
       </list>
     </option>
   </component>
@@ -154,8 +162,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -245,7 +253,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.com.acmol.risk in gs-messaging-stomp-websocket">
+  <component name="RunManager" selected="JUnit.GameControllerManualTest.reinforcementUnitAvailable01">
     <configuration name="Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.acmol.risk.Application" />
       <module name="gs-messaging-stomp-websocket" />
@@ -259,20 +267,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.acmol.risk.Application" />
-      <module name="gs-messaging-stomp-websocket" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.acmol.risk.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="RandomInitializer_ESTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="GameControllerManualTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="gs-messaging-stomp-websocket" />
       <extension name="coverage">
         <pattern>
@@ -281,13 +276,13 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.acmol.risk" />
-      <option name="MAIN_CLASS_NAME" value="com.acmol.risk.RandomInitializer_ESTest" />
+      <option name="MAIN_CLASS_NAME" value="com.acmol.risk.GameControllerManualTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ServerControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="GameControllerManualTest.getPlayerTerritories" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="gs-messaging-stomp-websocket" />
       <extension name="coverage">
         <pattern>
@@ -296,13 +291,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.acmol.risk" />
-      <option name="MAIN_CLASS_NAME" value="com.acmol.risk.ServerControllerTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="MAIN_CLASS_NAME" value="com.acmol.risk.GameControllerManualTest" />
+      <option name="METHOD_NAME" value="getPlayerTerritories" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="StringMessage_ESTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="GameControllerManualTest.reinforcementUnitAvailable01" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="gs-messaging-stomp-websocket" />
       <extension name="coverage">
         <pattern>
@@ -311,13 +307,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.acmol.risk" />
-      <option name="MAIN_CLASS_NAME" value="com.acmol.risk.StringMessage_ESTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="MAIN_CLASS_NAME" value="com.acmol.risk.GameControllerManualTest" />
+      <option name="METHOD_NAME" value="reinforcementUnitAvailable01" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Territory_ESTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="GameControllerManualTest.reinforcementUnitAvailable02" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="gs-messaging-stomp-websocket" />
       <extension name="coverage">
         <pattern>
@@ -326,13 +323,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.acmol.risk" />
-      <option name="MAIN_CLASS_NAME" value="com.acmol.risk.Territory_ESTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="MAIN_CLASS_NAME" value="com.acmol.risk.GameControllerManualTest" />
+      <option name="METHOD_NAME" value="reinforcementUnitAvailable02" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="com.acmol.risk in gs-messaging-stomp-websocket" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="GameControllerManualTest.rollTheDiceShouldReturnBoundedValues" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="gs-messaging-stomp-websocket" />
       <extension name="coverage">
         <pattern>
@@ -341,18 +339,20 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.acmol.risk" />
-      <option name="TEST_OBJECT" value="package" />
+      <option name="MAIN_CLASS_NAME" value="com.acmol.risk.GameControllerManualTest" />
+      <option name="METHOD_NAME" value="rollTheDiceShouldReturnBoundedValues" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.com.acmol.risk in gs-messaging-stomp-websocket" />
-        <item itemvalue="JUnit.ServerControllerTest" />
-        <item itemvalue="JUnit.Territory_ESTest" />
-        <item itemvalue="JUnit.StringMessage_ESTest" />
-        <item itemvalue="JUnit.RandomInitializer_ESTest" />
+        <item itemvalue="JUnit.GameControllerManualTest.reinforcementUnitAvailable01" />
+        <item itemvalue="JUnit.GameControllerManualTest.reinforcementUnitAvailable02" />
+        <item itemvalue="JUnit.GameControllerManualTest.getPlayerTerritories" />
+        <item itemvalue="JUnit.GameControllerManualTest" />
+        <item itemvalue="JUnit.GameControllerManualTest.rollTheDiceShouldReturnBoundedValues" />
       </list>
     </recent_temporary>
   </component>
@@ -469,41 +469,42 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Message_ESTest - 2019.12.21 at 23h 01m 27s.xml">
-      <configuration name="Message_ESTest" configurationId="JUnit" />
+    <history-entry file="GameControllerManualTest - 2019.12.24 at 15h 11m 50s.xml">
+      <configuration name="GameControllerManualTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="Player_ESTest - 2019.12.21 at 23h 01m 34s.xml">
-      <configuration name="Player_ESTest" configurationId="JUnit" />
+    <history-entry file="GameControllerManualTest - 2019.12.24 at 15h 15m 09s.xml">
+      <configuration name="GameControllerManualTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="RandomInitializer_ESTest - 2019.12.21 at 23h 01m 39s.xml">
-      <configuration name="RandomInitializer_ESTest" configurationId="JUnit" />
+    <history-entry file="GameControllerManualTest - 2019.12.24 at 15h 38m 56s.xml">
+      <configuration name="GameControllerManualTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ServerControllerTest - 2019.12.21 at 23h 01m 54s.xml">
-      <configuration name="ServerControllerTest" configurationId="JUnit" />
+    <history-entry file="GameControllerManualTest_getPlayerTerritories - 2019.12.24 at 15h 40m 07s.xml">
+      <configuration name="GameControllerManualTest.getPlayerTerritories" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="StringMessage_ESTest - 2019.12.21 at 23h 01m 59s.xml">
-      <configuration name="StringMessage_ESTest" configurationId="JUnit" />
+    <history-entry file="GameControllerManualTest_getPlayerTerritories - 2019.12.24 at 15h 40m 17s.xml">
+      <configuration name="GameControllerManualTest.getPlayerTerritories" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="Territory_ESTest - 2019.12.21 at 23h 02m 05s.xml">
-      <configuration name="Territory_ESTest" configurationId="JUnit" />
+    <history-entry file="GameControllerManualTest_getPlayerTerritories - 2019.12.24 at 15h 40m 27s.xml">
+      <configuration name="GameControllerManualTest.getPlayerTerritories" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="com_acmol_risk_in_gs-messaging-stomp-websocket - 2019.12.21 at 23h 02m 16s.xml">
-      <configuration name="com.acmol.risk in gs-messaging-stomp-websocket" configurationId="JUnit" />
+    <history-entry file="GameControllerManualTest_reinforcementUnitAvailable01 - 2019.12.24 at 15h 44m 28s.xml">
+      <configuration name="GameControllerManualTest.reinforcementUnitAvailable01" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ServerControllerTest - 2019.12.21 at 23h 05m 43s.xml">
-      <configuration name="ServerControllerTest" configurationId="JUnit" />
+    <history-entry file="GameControllerManualTest_reinforcementUnitAvailable02 - 2019.12.24 at 15h 44m 32s.xml">
+      <configuration name="GameControllerManualTest.reinforcementUnitAvailable02" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="com_acmol_risk_in_gs-messaging-stomp-websocket - 2019.12.21 at 23h 06m 42s.xml">
-      <configuration name="com.acmol.risk in gs-messaging-stomp-websocket" configurationId="JUnit" />
+    <history-entry file="GameControllerManualTest_reinforcementUnitAvailable02 - 2019.12.24 at 15h 47m 19s.xml">
+      <configuration name="GameControllerManualTest.reinforcementUnitAvailable02" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="com_acmol_risk_in_gs-messaging-stomp-websocket - 2019.12.21 at 23h 06m 52s.xml">
-      <configuration name="com.acmol.risk in gs-messaging-stomp-websocket" configurationId="JUnit" />
+    <history-entry file="GameControllerManualTest_reinforcementUnitAvailable01 - 2019.12.24 at 15h 47m 37s.xml">
+      <configuration name="GameControllerManualTest.reinforcementUnitAvailable01" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22239032" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22844176" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -512,7 +513,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32872504" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3548387" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.25345623" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39938557" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -613,13 +614,6 @@
     </SUITE>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/main.css" />
-    <entry file="file://$PROJECT_DIR$/mvnw.cmd">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mvnw">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-234">
@@ -813,16 +807,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/acmol/risk/AlternatePathfinderTest.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/acmol/risk/GameController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/acmol/risk/ServerControllerTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="235">
@@ -843,11 +827,25 @@
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-test/5.2.1.RELEASE/spring-test-5.2.1.RELEASE.jar!/org/springframework/test/context/cache/DefaultCacheAwareContextLoaderDelegate.class">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/acmol/risk/GameController_ESTest_scaffolding.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="191">
+          <caret line="31" column="49" selection-start-line="31" selection-start-column="49" selection-end-line="31" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/acmol/risk/GameController_ESTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="191">
+          <caret line="212" column="37" lean-forward="true" selection-start-line="212" selection-start-column="37" selection-end-line="212" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="190">
-            <caret line="38" column="97" selection-start-line="38" selection-start-column="97" selection-end-line="38" selection-end-column="97" />
+          <first_editor relative-caret-position="274">
+            <caret line="45" selection-start-line="45" selection-end-line="45" />
           </first_editor>
           <second_editor />
         </state>
@@ -855,6 +853,23 @@
       <provider editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="30" column="11" selection-start-line="30" selection-start-column="11" selection-end-line="30" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/acmol/risk/GameController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-350">
+          <caret line="204" column="24" lean-forward="true" selection-start-line="204" selection-start-column="24" selection-end-line="204" selection-end-column="65" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/acmol/risk/GameControllerManualTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
         </state>
       </provider>
     </entry>
