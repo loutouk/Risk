@@ -1,11 +1,8 @@
 
 import { Component, OnInit } from '@angular/core';
 import {WebsocketService} from '../websocket.service';
-import {DatastoreService} from '../datastore.service';
 import { Router } from '@angular/router';
 import {Player} from '../classes/player';
-import {Country} from '../classes/model/country';
-import {Continent} from '../classes/model/continent';
 import {GameContent} from '../classes/model/gamecontent';
 
 
@@ -22,12 +19,13 @@ export class GameComponent implements OnInit {
     //Contenu du jeu (assignation pays->joueurs, nbArmee, tour ...)
     gameContent : GameContent;
     
+    //Stock la map entre un joueur et sa couleur
     colorMap : Map<string,string>;    
     
-    //Stock la liste des renforts à rajouter
+    //Stock la liste courante des renforts à rajouter (pays->nombre)
     selectionReinforce : Map<string,number>;
 
-    //Stock la phase sous forme de string pour l'affichage
+    //Stock la phase de jeu sous forme de string pour l'affichage
     gamePhase:string;
 
     //Vrai si c'est au client courant de jouer
@@ -36,13 +34,13 @@ export class GameComponent implements OnInit {
     //Variable qui stock si le bouton "start" est disponible
     buttonStart:boolean;
 
-    //Stock le nombre de renfort encore disponible à poser
+    //Stock le nombre de renforts encore disponibles à poser
     nbRenfortDisponible:any;
 
-    //Stock le choix d'armées à employer en cas d'attaque/défense
+    //Stock le choix d'armées à employer en cas d'attaque/déplacement
     nbArmeeEmployees : any;
 
-    //Stock le maximum d'armées que le joueur peut employer pour l'attaque courante
+    //Stock le maximum d'armées que le joueur peut employer pour l'attaque/déplacement courant(e)
     maxNbEmployee:number;
 
     //Variables pour la gestion de la map
@@ -61,28 +59,29 @@ export class GameComponent implements OnInit {
     overCountryListener : EventListener;
     overVoisinsListener : EventListener;
 
-      // Variables utiles pour la génération de notifications
+      // Variables pour la génération de notifications
     warning: boolean;
     warningMessage: string;   
-
-
-    //TODO Rajouter formulaire avec nb armée à engager et un bouton valider pour envoyer (apparait uniquement quand select2 != null)
+  
     constructor(
         private router: Router,
-        private websocket: WebsocketService,
-        private datastore: DatastoreService
+        private websocket: WebsocketService
     ) { }
+
 
     ngOnInit() {
         this.initSVG();
         this.gameContent = new GameContent();
         this.buttonStart=false;
+        //Subscribe au canal /topic/game du serveur et gère les informations reçues
         this.websocket.startGameSubscription().subscribe(content =>{
             console.log(content);
             let data = JSON.parse(content.body);
+            //Arrivée d'un nouveau joueur
             if(data.id == "newPlayer"){
                 let tab = data.content.split(',');
                 let players = tab.slice(0,tab.length-1);
+                //S'il y a au moins 3 joueurs de prêts, le bouton start apparaît
                 if(players.length>=3) {
                     this.buttonStart=true;
                 }
@@ -93,14 +92,16 @@ export class GameComponent implements OnInit {
                     player.number= parseInt(playerData[1],10)         
                     this.gameContent.joueurs.push(player);
                 }   
-                this.datastore.setGameContent(this.gameContent);  
                 this.feedGameContent();   
             }
+            //Données reçues lors d'une partie
             else {               
+                //Actualisation des données de la partie sur la map
                 this.handleGameContent(JSON.parse(content.body).content);
                 if(this.buttonStart && this.gameContent.gameStarted){
                     this.buttonStart=false;
                 }
+                //Affichage de la phase de jeu
                 switch(this.gameContent.currentActionNumber){
                     case 0:
                         this.gamePhase="renfort";
@@ -114,17 +115,11 @@ export class GameComponent implements OnInit {
                     default:                      
                         break;
                 }
-                this.isMyTurn=(this.gameContent.currentPlayerNumber == this.websocket.getPlayer().number);
                 if(this.gameContent.gameIsOver){
                     this.resetMouseEvents();
                 }
             }
-            /*else{
-                this.enableWarning("invalide request on actualize received");
-            }*/
         });  
-      
-        this.datastore.setGameContent(this.gameContent);        
         this.feedGameContent();
         this.websocket.actualizePlayers();        
     }
@@ -135,26 +130,24 @@ export class GameComponent implements OnInit {
     // Gère l'arrivée de nouvelles données sur la partie en provenance du serveur
     handleGameContent(newContent){    
         this.gameContent.update(newContent);
-        this.datastore.setGameContent(this.gameContent);
         this.isMyTurn =(this.gameContent.currentPlayerNumber == this.websocket.getPlayer().number);
         this.feedGameContent();
+        //Affichage du message donné par le serveur
         if(this.gameContent.gameMessage != null){
             this.enableWarning(this.gameContent.gameMessage);
         }
     }
 
+    //Actualise l'affichage avec les nouvelles données de jeu
     feedGameContent(){   
         if(!this.gameContent.gameStarted){
             if(this.gameContent.joueurs != null){           
                 this.colorMap = new Map<string,string>();
-                //Autre set de couleurs pour tests   
                 var colors:string[];
-                colors = ['rgb(148,130,173)','rgb(198,138,49)','rgb(156,195,90)','rgb(214,81,99)','rgb(35,75,195','rgb(222,121,82)'];
-                var colors2:string[];
-                colors2=['#CEA252','#BDDB8C','#E78A94','#CEBADE','#EFCB73','#E79273'];
+                colors=['#CEA252','#BDDB8C','#E78A94','#CEBADE','#EFCB73','#E79273'];
                 var i=0;
                 for(let player of this.gameContent.joueurs){                  
-                    this.colorMap.set(player.name,colors2[i]);     
+                    this.colorMap.set(player.name,colors[i]);     
                     document.getElementById('player-name-h2_'+(i+1)).innerHTML=player.name;              
                     i++;
                 }                         
@@ -175,13 +168,16 @@ export class GameComponent implements OnInit {
         }
     }
 
+    //Gère l'event lors du click sur le boutton "start" pour lancer la partie
     onClickStart(){
         this.websocket.startGame();
     }
 
+    //Gère l'event lors du click du boutton "Valider" lors d'une attaque ou d'un déplacement
     onClickValidate(){
-        //attack
+        //Attaque
         if(this.gameContent.currentActionNumber==1){
+            //Double sécurité (client/serveur)
             if(this.nbArmeeEmployees>0 && this.nbArmeeEmployees < 4){
                 let stringAttack = this.textSel1.textContent+','+this.textSel2.textContent+','+this.nbArmeeEmployees;
                 this.websocket.attack(stringAttack);
@@ -190,7 +186,7 @@ export class GameComponent implements OnInit {
                 this.enableWarning("Nombre d'armées employées invalide :"+this.nbArmeeEmployees);
             }
         }
-        //fortify
+        //Deplacement
         else{
             if(this.nbArmeeEmployees>0){
    
@@ -198,10 +194,11 @@ export class GameComponent implements OnInit {
                 this.websocket.fortify(stringFortify);               
             }
         }
-
+        //Reset les 
         this.onClickCancel();
     }
 
+    //Gère l'event lors du click sur le boutton "passer"
     onClickPass(){
         if(this.isMyTurn){
             switch(this.gameContent.currentActionNumber){
@@ -217,6 +214,7 @@ export class GameComponent implements OnInit {
         }
     }
 
+    //Gère l'event lors du click sur le boutton "annuler" (reset des actions souris)
     onClickCancel(){
         this.textSel1.textContent="";
         this.textSel2.textContent="";
@@ -242,6 +240,7 @@ export class GameComponent implements OnInit {
         this.warningMessage = "";
     }  
 
+    // Initialisation de la map svg au lancement de la page
     initSVG(){
         this.svg = document.getElementById('mapsvg');  
 
@@ -276,6 +275,7 @@ export class GameComponent implements OnInit {
         this.initMouseEvents();     
     }
 
+    //Initialise les events de click et d'hovering sur les territoires
     initMouseEvents(){            
         for (let i = 0; i < this.countries.length; i++)
         {                        
@@ -284,6 +284,7 @@ export class GameComponent implements OnInit {
         this.highlightCountry.addEventListener('click', this.clickCountryListener, false);
     }
 
+    //Supprime les events d'hovering des territoires
     resetMouseEvents(){
         for (let i = 0; i < this.countries.length; i++)
         {                   
@@ -291,6 +292,7 @@ export class GameComponent implements OnInit {
         }
     }
 
+    //Supprime l'affichage assombrie des voisins du territoires selectionné/hovered
     resetVoisins(){
         var gVoisins = document.getElementById('gVoisins');
         var nodelist = Array.from(document.getElementsByClassName('voisin'));
@@ -300,11 +302,6 @@ export class GameComponent implements OnInit {
     }
 
     // generic function to create an xml element
-    // format for attr is very strict
-    // attrs is a string of attribute=value pairs separated by single spaces, 
-    // no quotes inside the string, no spaces in attributes
-    // eg. newElement( 'circle', 'cx=20 cy=20 r=15 visibility=hidden' );
-    //
     newElement( type, attrs, bool:boolean)
     {
         let nameSpace = null;
@@ -324,8 +321,10 @@ export class GameComponent implements OnInit {
         return result;
     }
 
+    //Gère l'event du click sur un territoire
     clickCountry(evt)
     {   
+        //Vérification de sécurité
         if(this.gameContent.gameStarted){
             if(this.isMyTurn){       
                 switch(this.gameContent.currentActionNumber){
@@ -359,22 +358,21 @@ export class GameComponent implements OnInit {
                         else{
                             this.enableWarning("Vous ne possédez pas ce pays !");
                         }
-                        this.selectedCountry1 = null;
-                        this.selectedCountry2 = null;
-                        this.textSel1.textContent='Over a country';
-                        this.textSel2.textContent='';
+                        this.resetSelection();
                         this.resetMouseEvents();
                         this.resetVoisins();
                         this.highlightCountry.setAttribute('d','');
                         this.initMouseEvents();
                         this.feedGameContent();
                         break;
-                    //Attack
+                    //Attack&Deplacement
                     case 1:
                     case 2:
+                        //Première sélection
                         if(this.selectedCountry1==null){
                             this.selectedCountry1=this.hoveredCountry;
                             let id1 = this.selectedCountry1.getAttribute('id');
+                            //Le territoire source de l'action doit appartenir au joueur courant
                             if(this.gameContent.findCountry(id1).namePlayer == this.gameContent.getCurrentPlayerName()){
                                 this.textSel1.textContent=this.selectedCountry1.getAttribute('id');
                                 this.resetMouseEvents();
@@ -387,10 +385,7 @@ export class GameComponent implements OnInit {
                             }
                             else{
                                 this.enableWarning("Vous ne possédez pas ce pays !");
-                                this.selectedCountry1 = null;
-                                this.selectedCountry2 = null;
-                                this.textSel1.textContent='Over a country';
-                                this.textSel2.textContent='';
+                                this.resetSelection();
                                 this.resetMouseEvents();
                                 this.resetVoisins();
                                 this.highlightCountry.setAttribute('d','');
@@ -400,94 +395,89 @@ export class GameComponent implements OnInit {
                         }
                         //reset souris events si on reclique sur le même territoire
                         else if(evt.target.getAttribute('id')=='highlightCountry'){
-                            this.selectedCountry1 = null;
-                            this.selectedCountry2 = null;
-                            this.textSel1.textContent='Over a country';
-                            this.textSel2.textContent='';
+                            this.resetSelection();
                             this.resetMouseEvents();
                             this.resetVoisins();
                             this.highlightCountry.setAttribute('d','');
                             this.initMouseEvents();
                         }
+                        //Seconde sélection
                         else{                
                             this.selectedCountry2 = this.hoveredVoisin;
                             let id2 = this.selectedCountry2.getAttribute('id').substring(1);
                             this.resetMouseEvents();
                             this.resetVoisins();
                             this.highlightCountry.setAttribute('d','');    
-                            //attack
+                            //Attaque
                             if(this.gameContent.currentActionNumber==1){
+                                //Le territoire cible ne doit pas appartenir au joueur courant (on n'attaque pas ses propres territoires)
                                 if(this.gameContent.findCountry(id2).namePlayer != this.gameContent.getCurrentPlayerName()){
                                     this.textSel2.textContent=id2;    
                                     this.maxNbEmployee = Math.min(this.gameContent.findCountry(this.textSel1.textContent).nbArmee-1,3);          
                                 }
                                 else{
                                     this.enableWarning("Ce territoire vous appartient déjà !");   
-                                    this.selectedCountry1 = null;
-                                    this.selectedCountry2 = null;
-                                    this.textSel1.textContent='Over a country';
-                                    this.textSel2.textContent='';     
+                                    this.resetSelection();   
                                     this.initMouseEvents();    
                                 }      
                             }
-                            //fortify
+                            //Déplacement
                             else if(this.gameContent.currentActionNumber==2){
+                                //Le territoire cible doit appartenir au joueur courant (on déplace ses armées sur ses territoires uniquement)
                                 if(this.gameContent.findCountry(id2).namePlayer == this.gameContent.getCurrentPlayerName()){
                                     this.textSel2.textContent=id2;    
                                     this.maxNbEmployee = this.gameContent.findCountry(this.textSel1.textContent).nbArmee-1;          
                                 }
                                 else{
                                     this.enableWarning("Ce territoire ne vous appartient pas !");   
-                                    this.selectedCountry1 = null;
-                                    this.selectedCountry2 = null;
-                                    this.textSel1.textContent='Over a country';
-                                    this.textSel2.textContent='';     
+                                    this.resetSelection();     
                                     this.initMouseEvents();    
                                 }  
                             }  
-                            else{ //Cas impossible (pour tests)
+                            else{ 
+                                //Cas impossible
                                 this.enableWarning("This shouldn't happen");   
-                                this.selectedCountry1 = null;
-                                this.selectedCountry2 = null;
-                                this.textSel1.textContent='Over a country';
-                                this.textSel2.textContent='';     
+                                this.resetSelection();  
                                 this.initMouseEvents();     
                             }       
                         } 
                         break;                   
                     default:
-                        //Cas impossible (pour tests)
+                        //Cas impossible
                         this.enableWarning("This shouldn't happen");   
-                        this.selectedCountry1 = null;
-                        this.selectedCountry2 = null;
-                        this.textSel1.textContent='Over a country';
-                        this.textSel2.textContent='';     
+                        this.resetSelection();
                         this.initMouseEvents();     
                         break;
-                }
-              
+                }              
             }
             else{
                 this.enableWarning("Ce n'est pas votre tour !");
             }   
         }
-    }
-
+    } 
+    
+    //Gère l'event quand la souris du joueur passe sur un territoire
     mouseoverCountry( evt )      
-    {        
+    {       
+        //Si aucun territoire n'a été selectionné : on assombrie ses voisins pour les identifier et on donne au joueur le nom du territoire qu'il survole 
         if(this.selectedCountry1==null){     
             this.hoveredCountry = evt.target;
             var id = this.hoveredCountry.getAttribute('id');
+
+            //Mis à jour du champ texte de première sélection pour identifier le nom du territoire survolé
             var outline = this.hoveredCountry.getAttribute( 'd' );
             this.highlightCountry.setAttribute( 'd', outline );
             this.textSel1.textContent = id;
 
+            //Suppression des anciens voisins générés avant d'en créer de nouveaux
             var gVoisins = document.getElementById('gVoisins');
             var nodelist = Array.from(document.getElementsByClassName('voisin'));
             nodelist.forEach(e=>{
                 gVoisins.removeChild(e);
             });
             this.highlightVoisins = new Array<Element>();
+
+            //On assombrie les nouveaux voisins du territoire survolé
             let country = this.gameContent.findCountry(id);      
             for(let j = 0 ; j <country.adjCountries.length;j++){
                 var voisin = document.createElementNS( "http://www.w3.org/2000/svg", 'path');
@@ -501,6 +491,7 @@ export class GameComponent implements OnInit {
                 this.highlightVoisins.push(voisin);
             }
         }
+        //Si une première sélection a été faite, on éclaircit le territoire voisin survolé en mettant à jour le nom de ce dernier dans le deuxieme champ texte
         else{
             if(this.hoveredVoisin==null){
                 this.hoveredVoisin=evt.target;
@@ -512,6 +503,13 @@ export class GameComponent implements OnInit {
             }
             this.textSel2.textContent = this.hoveredVoisin.getAttribute('id').substring(1);
         }
+    }  
+
+    //Remet à 0 les sélections du joueur
+    resetSelection(){
+    	this.selectedCountry1 = null;
+        this.selectedCountry2 = null;
+        this.textSel1.textContent='Over a country';
+        this.textSel2.textContent='';
     }
-  
 }

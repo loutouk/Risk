@@ -4,7 +4,6 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import {environment} from '../environments/environment';
-import {DatastoreService} from './datastore.service';
 import { Player } from './classes/player';
 
 declare var require: any;
@@ -16,33 +15,28 @@ var SockJs = require("sockjs-client");
 })
 export class WebsocketService {
 
+  //Stomp Client pour gérer les requêtes avec le serveur
   private stompClient;
 
+  //Observable de la partie en cours
   private gameSubscription;
 
-  private connectionSubscription;
-
+  //Stock l'instance du joueur connecté
   private player : Player;
 
 
-  constructor( private datastore: DatastoreService) { }
+  constructor() { }
 
   // Connexion au websocket du serveur
   public connect(): void{
     let socket = new SockJs(environment.websocketRegisterUrl);
-    this.stompClient = Stomp.over(socket); // = "ws://localhost:8080/connection"
+    this.stompClient = Stomp.over(socket);
     let that = this;
     this.stompClient.connect({}, frame => {
     });   
   }
 
-  public getPlayer():Player{
-    return this.player;
-  }
-  public setPlayer(player:Player){
-    this.player=player;
-  }
-  
+  // Création de l'observable sur le topic /topic/game du serveur
   startGameSubscription():Observable<any>{
     let that = this;
     let obs =
@@ -54,7 +48,8 @@ export class WebsocketService {
     this.gameSubscription=obs;
     return obs;
   }
- 
+
+  // Création de l'observable sur le topic /game/connectionId du serveur (permet de récupérer son ID)
   startConnectionSubscription(playerName): Observable<any>{
     let that = this;
     let obs =
@@ -67,65 +62,59 @@ export class WebsocketService {
     });   
     return obs;
   }
+
+  // Envoie au serveur d'un message pour passer l'étape "attaque" du tour du joueur
   skipAttack(){
     this.stompClient.send('/app/skipattack');
   }
 
+  // Envoie au serveur d'un message pour passer l'étape "déplacement" du tour du joueur
   skipFortify(){
     this.stompClient.send('/app/skipfortify');
   }
 
+  // Envoie au serveur d'une requête de renfort sur une liste de territoires passée en paramètre
   putReinforce(stringReinforce){
     this.stompClient.send('/app/putreinforce',{},stringReinforce);
   }
+
+  // Envoie au serveur d'une demande de connexion (pour permettre d'enregistrer le joueur côté serveur et de renvoyer sur /topic/connectionId/{{playerName}} l'id du joueur)
   sendConnection(playerName){
     this.stompClient.send('/app/connection/'+playerName);
   }
 
+  // Envoie au serveur d'une requête d'attaque sur un territoire ennemi
   attack(stringAttack){
     this.stompClient.send('/app/attack',{},stringAttack);
   }
 
+  // Envoie au serveur d'une requête de déplacement d'armée entre deux territoires adjacents possédés
   fortify(stringFortify){
     this.stompClient.send('/app/fortify',{},stringFortify);
   }
+
+  // Envoie au serveur un message pour lancer la partie (quand assez de joueurs ont rejoins)
   startGame(){
     this.stompClient.send('/app/launch');
   }
  
+  // Envoie au serveur un message pour demander l'actualisation de la liste des joueurs à tous les joueurs connectés
   actualizePlayers(){
     this.stompClient.send('/app/actualizeplayers');
   }
 
-  // Recupération de l'observateur sur le canal websocket de la partie, permet de savoir si un message arrive sur le canal
+  //Getters & Setters
+
   public getGameSubscription(): Observable<any>
   {
     return this.gameSubscription;
   }  
 
-  public getConnectionSubscription():any
-  {
-    return this.connectionSubscription;
+  public getPlayer():Player{
+    return this.player;
   }
-  /*that.readySubscription(name).subscribe(function(content){
-        // Le serveur renvoi au client un id qui lui est propre
-        //(affiche le message sur la page)
-        console.log("what");
-        console.log(content);
-        console.log("what");
-        let jsonContent = JSON.parse(content.body);        
-        this.player.id = jsonContent.id;
-        console.log("caca : "+this.player.id);
-        this.datastore.setPlayer(this.player);
-        // Le client subscribe au channel /game/
-        this.websocket.startGameSubscription().subscribe(content => {
-          // Le serveur envoie manuellement une réponse quand tous les joueurs souhaités ont rejoint
-          // Et retourne une nouvelle partie initialisée
-          let gameContent = JSON.parse(content.body);
-          this.datastore.setGameContent(new GameContent().update(gameContent));
-          this.router.navigate(["game"]);
-        });       
-        
-        
-      });*/
+
+  public setPlayer(player:Player){
+    this.player=player;
+  }  
 }
