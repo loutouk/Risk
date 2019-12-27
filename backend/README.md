@@ -1,5 +1,17 @@
 # RiskProjectBack
 
+## Server deployment
+
+A jar is generated with the spring-boot-maven-plugin. The configuration is done in the pom.xml file, where the main class is specify. The plugin generates two files: an app.jar and a app.jar.original.
+
+To build the jar in the root directory
+
+`mvn clean install`
+
+To run the jar
+
+`java -jar .\target\gs-messaging-stomp-websocket-0.1.0.jar`
+
 ## Static analysis with SonarQube
 
 Analyzing a Maven project consists of running a Maven sonar command from the directory that holds the main project pom.xml

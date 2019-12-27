@@ -6,6 +6,7 @@
     <groupId>org.springframework</groupId>
     <artifactId>gs-messaging-stomp-websocket</artifactId>
     <version>0.1.0</version>
+    <packaging>jar</packaging>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -71,6 +72,8 @@
     <properties>
         <java.version>1.8</java.version>
         <evosuiteVersion>1.0.6</evosuiteVersion>
+        <!-- Spring boot main class -->
+        <start-class>com.acmol.risk.Application</start-class>
     </properties>
 
     <build>
@@ -78,6 +81,17 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <fork>true</fork>
+                    <mainClass>${start-class}</mainClass>
+                </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>repackage</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
             <plugin>
                 <groupId>org.sonarsource.scanner.maven</groupId>
