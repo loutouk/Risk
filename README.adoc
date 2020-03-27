@@ -24,3 +24,8 @@ mvn process-resources
 ----
 
 La version PDF du rapport sera disponible dans le dossier `./target/doc/`
+
+----
+
+
+![Preview](https://github.com/loutouk/Risk/blob/master/image/preview.png)
