@@ -1,5 +1,7 @@
 = Project 2019: Risk
 
+![Preview](https://github.com/loutouk/Risk/blob/master/image/preview.png)
+
 == Auteurs
 
 LASHERME Loic, FILAUDEAU Eloi, NANTIER Matthias, BOURSIER Louis
@@ -28,4 +30,3 @@ La version PDF du rapport sera disponible dans le dossier `./target/doc/`
 ----
 
 
-![Preview](https://github.com/loutouk/Risk/blob/master/image/preview.png)
