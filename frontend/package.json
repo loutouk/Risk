@@ -22,7 +22,7 @@
     "@angular/platform-browser-dynamic": "~8.2.14",
     "@angular/router": "~8.2.14",
     "@stomp/stompjs": "^5.1.0",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "ng-inline-svg": "^9.1.0",
     "raphael": "^2.3.0",
     "rxjs": "~6.4.0",
