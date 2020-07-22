@@ -1,6 +1,6 @@
 = Project 2019: Risk
 
-![](./image/preview.png)
+![](preview.png)
 
 == Auteurs
 
