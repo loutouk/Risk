@@ -1,5 +1,7 @@
 = Project 2019: Risk
 
+![](image/preview.png)
+
 == Auteurs
 
 LASHERME Loic, FILAUDEAU Eloi, NANTIER Matthias, BOURSIER Louis
