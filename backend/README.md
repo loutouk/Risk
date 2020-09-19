@@ -2,7 +2,7 @@
 
 ## Server deployment
 
-A jar is generated with the spring-boot-maven-plugin. The configuration is done in the pom.xml file, where the main class is specify. The plugin generates two files: an app.jar and a app.jar.original.
+A jar is generated with the spring-boot-maven-plugin. The configuration is done in the pom.xml file, where the main class is specified. The plugin generates two files: an `app.jar` and an `app.jar.original`.
 
 To build the jar in the root directory
 
