@@ -1,5 +1,7 @@
 = Project 2019: Risk
 
+<img src="https://raw.githubusercontent.com/loutouk/Risk/master/image/preview.png">
+
 == Auteurs
 
 LASHERME Loic, FILAUDEAU Eloi, NANTIER Matthias, BOURSIER Louis
